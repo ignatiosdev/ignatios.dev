@@ -14,6 +14,25 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        dark: {
+          primary: "#1432CD",
+          "base-100": "#01030E",
+          "base-content": "#D9D9D9",
+          ".text-subtitle": {
+            color: "#D9D9D9",
+            opacity: 0.8,
+          },
+          ".text-subtitle-darker": {
+            color: "#D9D9D9",
+            opacity: 0.6,
+          },
+        },
+      },
+    ],
+  },
 };
 export default config;
