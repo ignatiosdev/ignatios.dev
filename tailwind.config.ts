@@ -22,13 +22,23 @@ const config: Config = {
           primary: "#1432CD",
           "base-100": "#01030E",
           "base-content": "#D9D9D9",
+          ".container-default": {
+            "border-color": "#303133",
+            "border-width": "2.5px",
+            "border-style": "solid",
+            "border-radius": "15px",
+            "background-color": "#01030E",
+            "padding":"1.5rem"
+          },
           ".text-subtitle": {
             color: "#D9D9D9",
             opacity: 0.8,
+            "font-size" : "16px"
           },
           ".text-subtitle-darker": {
             color: "#D9D9D9",
             opacity: 0.6,
+            "font-size" : "16px"
           },
         },
       },
