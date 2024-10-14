@@ -1,11 +1,8 @@
-"use client"; // Make sure this is the first line
+"use client";
 
 import NavbarItems from "./../NavbarItems/NavbarItems";
-
-type Props = {
-  currentPage: string; // Correctly define currentPage as a string
-  changePage: (path: string, id: string) => void; // Correctly type the function
-};
+import { useState } from "react";
+type Props = {};
 
 interface NavigationItem {
   id: string;
@@ -20,7 +17,23 @@ const navigationItems: NavigationItem[] = [
   { id: "contact", label: "Contact", path: "/contact" },
 ];
 
-function Navbar({ currentPage, changePage }: Props) {
+import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
+
+function Navbar({}: Props) {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const [currentPage, setCurrentPage] = useState(
+    pathname === "/" ? "projects" : pathname.slice(1) // Normalize pathname
+  );
+
+  function changePage(path: string, id: string) {
+    router.push(path);
+    console.log(`Changed to ${path}`);
+    setCurrentPage(id);
+  }
+
   return (
     <div className="container-default">
       <div className="px-6">

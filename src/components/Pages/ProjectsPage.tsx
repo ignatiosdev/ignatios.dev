@@ -6,7 +6,7 @@ type Props = {pageId:string};
 function ProjectsPage({pageId}: Props) {
   return (
     <div className="flex">
-      <PageIcon pageId={pageId}></PageIcon>
+      <PageIcon></PageIcon>
       <h1>ProjectsPage</h1>
     </div>
   );
