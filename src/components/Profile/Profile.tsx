@@ -1,8 +1,8 @@
-import React from "react";
+""
 
-import ProfilePicture from "./../ProfilePicture/ProfilePicture";
+import ProfilePicture from "@/components/Profile/ProfilePicture/ProfilePicture";
 import profileImg from "../../assets/img/profileImage.png";
-import ActionButton from "./../ActionButton/ActionButton";
+import ActionButton from "@/components/Profile/ActionButton/ActionButton";
 
 type Props = {};
 

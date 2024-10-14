@@ -1,5 +1,5 @@
-import React from "react";
-import SkillItem from "./../SkillItem/SkillItem";
+""
+import SkillItem from "@/components/Skills/SkillItem/SkillItem";
 
 type Props = { skills: string[] };
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { setCurrentPageId } from "@/utils/localStorageHelper.ts";
-import Button from "./../Button/Button";
+import Button from "@/components/Button/Button";
 import { useRouter } from "next/navigation";
 
 type Props = {};

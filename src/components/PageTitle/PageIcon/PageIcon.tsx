@@ -1,7 +1,7 @@
 "use client";
 
 
-import React from "react";
+""
 
 import { FaGraduationCap } from "react-icons/fa";
 import { IoFolderOpen } from "react-icons/io5";

@@ -1,17 +1,18 @@
 "use client";
 
-import NavbarItems from "./../NavbarItems/NavbarItems";
+import NavbarItems from "@/components/Navbar/NavbarItems/NavbarItems";
+import pagesIndex from "@/utils/pagesIndex.ts";
+import { setCurrentPageId } from "@/utils/localStorageHelper.ts";
 import { useState, useEffect } from "react";
-import pagesIndex from "../../utils/pagesIndex.ts";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
-import { setCurrentPageId } from "@/utils/localStorageHelper.ts"; 
+
 
 type Props = {};
 
 function Navbar({}: Props) {
-  const router = useRouter(); 
-  const pathname = usePathname(); 
+  const router = useRouter();
+  const pathname = usePathname();
 
   // State to track the current page
   const [currentPageId, setCurrentPageIdState] = useState(
@@ -21,25 +22,27 @@ function Navbar({}: Props) {
   // Effect to listen for changes currentPageId global state
   useEffect(() => {
     const handlePageChange = (event: CustomEvent) => {
-      const newValue = event.detail; 
-      setCurrentPageIdState(newValue); 
+      const newValue = event.detail;
+      setCurrentPageIdState(newValue);
       console.log("Page changed to:", newValue);
     };
 
     // Add event listener for the pageChange event
-    window.addEventListener("pageChange", handlePageChange as EventListener); 
+    window.addEventListener("pageChange", handlePageChange as EventListener);
 
     // Clean up event listener on unmount
     return () => {
-      window.removeEventListener("pageChange", handlePageChange as EventListener); 
+      window.removeEventListener(
+        "pageChange",
+        handlePageChange as EventListener
+      );
     };
   }, []);
 
   // Function to change the page and update localStorage
   function changePage(path: string, id: string) {
-    router.push(path); 
-    setCurrentPageId(id); 
-
+    router.push(path);
+    setCurrentPageId(id);
   }
 
   return (
@@ -47,10 +50,10 @@ function Navbar({}: Props) {
       <div className="flex justify-between w-2/3 gap-2">
         {pagesIndex.map((item) => (
           <NavbarItems
-            key={item.id} 
-            onClick={() => changePage(item.path, item.id)} 
-            text={item.label} 
-            active={item.id === currentPageId} 
+            key={item.id}
+            onClick={() => changePage(item.path, item.id)}
+            text={item.label}
+            active={item.id === currentPageId}
           />
         ))}
       </div>

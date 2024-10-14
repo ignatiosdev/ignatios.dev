@@ -1,4 +1,4 @@
-import PageIcon from "../PageIcon/PageIcon";
+import PageIcon from "@/components/PageTitle/PageIcon/PageIcon";
 
 type Props = { currentPageId: string; text: string };
 

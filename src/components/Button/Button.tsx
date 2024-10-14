@@ -1,5 +1,5 @@
 import { text } from "node:stream/consumers";
-import React from "react";
+""
 
 type Props = { text: string,onClick : React.MouseEventHandler<HTMLButtonElement> };
 
