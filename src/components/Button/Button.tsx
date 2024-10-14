@@ -5,8 +5,8 @@ type Props = { text: string };
 
 export default function Button({ text }: Props) {
   return (
-    <button className="btn btn-block btn-primary text-lg ">
-    {text}
+    <button className="btn btn-block btn-primary text-lg font-bold">
+      {text}
     </button>
   );
 }
