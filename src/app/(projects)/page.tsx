@@ -1,3 +1,7 @@
+import PageTitle from "@/components/PageTitle/PageTitle";
+
 export default function Projects() {
-    return <h1 className="text-subtitle">Projects</h1>
+    return (
+        <PageTitle currentPageId="projects" text="Projects"></PageTitle>
+    )
 }

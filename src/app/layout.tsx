@@ -2,7 +2,7 @@ import "./globals.css";
 import Profile from "./../components/Profile/Profile";
 import Skills from "./../components/Skills/Skills";
 import Navbar from "./../components/Navbar/Navbar";
-import PageIcon from "@/components/PageIcon/PageIcon";
+
 
 
 
@@ -28,7 +28,6 @@ export default function RootLayout({
           <div className="w-6/12 flex flex-col gap-4">
             <Navbar />
             <div className="container-default">
-              <PageIcon/>
               {children}
             </div>
           </div>

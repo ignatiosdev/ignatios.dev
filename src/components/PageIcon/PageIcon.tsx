@@ -1,25 +1,19 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+
 import React from "react";
 
 import { FaGraduationCap } from "react-icons/fa";
 import { IoFolderOpen } from "react-icons/io5";
 
+type Props = {currentPageId:string};
 
+function PageIcon({currentPageId}: Props) {
 
-type Props = {};
-
-function PageIcon({}: Props) {
-  const pathname: string = usePathname();
-
-  const currentPageId: string = (
-    pathname === "/" ? "projects" : pathname
-  ).replace(/^\/+/, "");
 
   const defaultIconProps: { [key: string]: string | number } = {
-    className:"text-primary rounded-full bg-primary-content p-1",
-    size: 60, 
+    className: "text-primary rounded-full bg-primary-content p-1",
+    size: 40,
   };
 
   const pageIcons: { [key: string]: React.ReactNode } = {

@@ -2,20 +2,14 @@
 
 import NavbarItems from "./../NavbarItems/NavbarItems";
 import { useState } from "react";
+import pagesIndex from "../../utils/pagesIndex.ts"
+
+
 type Props = {};
 
-interface NavigationItem {
-  id: string;
-  label: string;
-  path: string;
-}
 
-const navigationItems: NavigationItem[] = [
-  { id: "projects", label: "Projects", path: "/" },
-  { id: "experience", label: "Experience", path: "/experience" },
-  { id: "education", label: "Education", path: "/education" },
-  { id: "contact", label: "Contact", path: "/contact" },
-];
+
+
 
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
@@ -36,9 +30,9 @@ function Navbar({}: Props) {
 
   return (
     <div className="container-default">
-      <div className="px-6">
-        <div className="flex justify-around w-2/3 gap-2">
-          {navigationItems.map((item) => (
+    
+        <div className="flex justify-between w-2/3 gap-2">
+          {pagesIndex.map((item) => (
             <NavbarItems
               key={item.id} // Add a key for the mapped items
               onClick={() => changePage(item.path, item.id)}
@@ -48,7 +42,7 @@ function Navbar({}: Props) {
           ))}
         </div>
       </div>
-    </div>
+
   );
 }
 
