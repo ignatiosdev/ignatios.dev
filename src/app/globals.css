@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: Inter;
+  src: url("./../fonts/Inter.ttf");
+}
+
+body {
+  font-size: 16px;
+  font-family: Inter;
+  color: #D9D9D9;
+}

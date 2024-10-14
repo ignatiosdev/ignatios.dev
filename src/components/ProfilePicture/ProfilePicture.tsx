@@ -1,9 +1,15 @@
-import React from 'react'
+import "./ProfilePicture.css";
+import { StaticImageData } from "next/image";
 
-type Props = {}
+type Props = { profileImg: StaticImageData };
 
-export default function ProfilePicture({}: Props) {
+export default function ProfilePicture({ profileImg }: Props) {
   return (
-    <div>ProfilePicture</div>
-  )
+    <img
+      src={profileImg.src}
+      className="w-40 h-40 container-round mx-auto"
+    >
+      
+    </img>
+  );
 }
