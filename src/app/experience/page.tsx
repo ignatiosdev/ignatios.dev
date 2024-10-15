@@ -1,3 +1,5 @@
+import PageTitle from "@/components/PageTitle/PageTitle";
+
 export default function Experience() {
-    return <h1>Experience</h1>
+  return <PageTitle currentPageId="experience" text="Experience" />;
 }

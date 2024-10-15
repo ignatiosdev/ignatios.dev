@@ -1,3 +1,5 @@
+import PageTitle from "@/components/PageTitle/PageTitle";
+
 export default function Education() {
-    return <h1>Education</h1>
+    return <PageTitle currentPageId="education" text="Education"/>
 }

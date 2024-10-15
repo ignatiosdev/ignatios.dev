@@ -1,3 +1,4 @@
+import PageTitle from "@/components/PageTitle/PageTitle";
 export default function Contact() {
-    return <h1>Contact</h1>
+    return <PageTitle currentPageId="contact" text="Contact me"></PageTitle>
 }
