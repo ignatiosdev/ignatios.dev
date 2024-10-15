@@ -4,15 +4,16 @@ import Project from "@/types/Project";
 import projectsData from "@/data/projects";
 
 export default function ProjectsPage() {
-  console.log(projectsData);
-  const mockProject: Project = projectsData[0];
+  const mockProject: Project = projectsData[0] as Project; // Type assertion
 
   return (
     <>
-      <div className="flex flex-col gap-4">
-        <PageTitle currentPageId="projects" text="Projects" />
+      <div className="flex flex-col gap-2 -mx-3">
+        <div className="px-3 ">
+          <PageTitle currentPageId="projects" text="Projects" />
+        </div>
         <div className="flex flex-wrap ">
-          {/* {Projects.map(
+          {/* {projectsData.map(
           (
             project // Map through all projects
           ) => (
@@ -20,9 +21,6 @@ export default function ProjectsPage() {
           )
         )} */}
 
-
-
-
           <div className="w-1/2 p-3">
             <ProjectItem key={mockProject.id} {...mockProject} />
           </div>
@@ -35,7 +33,6 @@ export default function ProjectsPage() {
           <div className="w-1/2 p-3">
             <ProjectItem key={mockProject.id} {...mockProject} />
           </div>
-
         </div>
       </div>
     </>
