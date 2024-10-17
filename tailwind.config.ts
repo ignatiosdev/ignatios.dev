@@ -16,6 +16,7 @@ const config: Config = {
   },
   plugins: [require("daisyui")],
   daisyui: {
+    styled:false,
     themes: [
       {
         dark: {

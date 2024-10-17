@@ -24,7 +24,7 @@ function Profile({}: Props) {
         </p>
       </div>
 
-      <div className="w-1/2 mx-auto mt-2.5 ">
+      <div className="w-2/3 mx-auto mt-2.5 ">
         <ActionButton></ActionButton>
       </div>
     </div>

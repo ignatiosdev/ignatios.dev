@@ -1,11 +1,21 @@
 import { text } from "node:stream/consumers";
-""
+("");
 
-type Props = { text: string,onClick : React.MouseEventHandler<HTMLButtonElement> };
+type Props = {
+  text: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  className?: string;
+};
 
-export default function Button({ onClick, text }: Props) {
+export default function Button({ onClick, text, className }: Props) {
   return (
-    <button onClick={onClick} className="btn btn-block btn-primary text-lg font-bold text-base-100">
+    <button
+      onClick={onClick}
+      className={
+        `btn bg-primary font-bold ` + className
+
+      }
+    >
       {text}
     </button>
   );
