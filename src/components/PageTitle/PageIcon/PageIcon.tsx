@@ -1,7 +1,5 @@
 "use client";
 
-("");
-
 import { FaGraduationCap } from "react-icons/fa";
 import { IoFolderOpen } from "react-icons/io5";
 import { MdOutlineWork } from "react-icons/md";
