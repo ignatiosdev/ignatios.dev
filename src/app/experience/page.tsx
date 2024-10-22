@@ -23,9 +23,9 @@ export default function Experience() {
         {
         experienceData.map(
           (
-            item
+            item,index
           ) => (
-          <ExperienceItem title={item.title} date={item.date} description={item.description}></ExperienceItem>
+          <ExperienceItem key={index} title={item.title} date={item.date} description={item.description}></ExperienceItem>
         )
       )}
          
