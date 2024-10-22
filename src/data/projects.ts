@@ -1,6 +1,6 @@
 import Project from "@/types/Project";
 
-const projects: Project[] = [
+const projectsData: Project[] = [
     {
       id: 1,
       title: "Project.com",
@@ -11,4 +11,4 @@ const projects: Project[] = [
   ];
   
 
-export default projects
+export default projectsData
