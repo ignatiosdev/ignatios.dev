@@ -13,29 +13,18 @@ export default function ProjectsPage() {
           <PageTitle currentPageId="projects" text="Projects" />
         </div>
         <div className="flex flex-wrap ">
-          {/* {projectsData.map(
+       {projectsData.map(
           (
             project // Map through all projects
           ) => (
-            <div className="w-1/2"> <ProjectItem key={project.id} {...project} /></div>
+            <div className="w-1/2 p-3"> <ProjectItem key={project.id} {...project} /></div>
           )
-        )} */}
+        )} 
 
 
 
 
-          <div className="w-1/2 p-3">
-            <ProjectItem key={mockProject.id} {...mockProject} />
-          </div>
-          <div className="w-1/2 p-3">
-            <ProjectItem key={mockProject.id} {...mockProject} />
-          </div>
-          <div className="w-1/2 p-3">
-            <ProjectItem key={mockProject.id} {...mockProject} />
-          </div>
-          <div className="w-1/2 p-3">
-            <ProjectItem key={mockProject.id} {...mockProject} />
-          </div>
+         
         </div>
       </div>
     </>
