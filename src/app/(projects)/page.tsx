@@ -21,6 +21,9 @@ export default function ProjectsPage() {
           )
         )} */}
 
+
+
+
           <div className="w-1/2 p-3">
             <ProjectItem key={mockProject.id} {...mockProject} />
           </div>
