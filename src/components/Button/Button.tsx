@@ -1,5 +1,4 @@
-import { text } from "node:stream/consumers";
-("");
+
 
 type Props = {
   text: string;
