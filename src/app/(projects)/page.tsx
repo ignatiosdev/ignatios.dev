@@ -1,10 +1,9 @@
 import PageTitle from "@/components/PageTitle/PageTitle";
 import ProjectItem from "@/components/Projects/ProjectItem/ProjectItem";
-import Project from "@/types/Project";
 import projectsData from "@/data/projects";
 
 export default function ProjectsPage() {
-  const mockProject: Project = projectsData[0] as Project; // Type assertion
+
 
   return (
     <>
@@ -15,9 +14,9 @@ export default function ProjectsPage() {
         <div className="flex flex-wrap ">
        {projectsData.map(
           (
-            project // Map through all projects
+            project 
           ) => (
-            <div className="w-1/2 p-3"> <ProjectItem key={project.id} {...project} /></div>
+            <div key={project.id} className="w-1/2 p-3"> <ProjectItem  {...project} /></div>
           )
         )} 
 
