@@ -6,7 +6,7 @@ import educationData from "@/data/education";
 export default function Education() {
   return (
     <>
-      <PageTitle currentPageId="education" text="Education" />
+      <PageTitle iconSize={43} currentPageId="education" text="Education" />
       {/* <div className="flex flex-col px-2 pt-5 gap-y-1">
         <div className="flex ">
           <h1 className="text-lg font-semibold">Full Stack Developer</h1>
