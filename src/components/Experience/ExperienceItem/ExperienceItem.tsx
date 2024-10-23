@@ -20,8 +20,8 @@ function ExperienceItem({date,title,description}: Props) {
   return (
     <TimelineItem className="py-1.5">
           <TimelineSeparator>
-            <TimelineDot className="bg-primary"/>
-            <TimelineConnector className="bg-primary"/>
+            <TimelineDot style={{ backgroundColor: '#1432CD' }} />
+            <TimelineConnector style={{ backgroundColor: '#1432CD' }} />
           </TimelineSeparator>
           <TimelineContent>
             {" "}
