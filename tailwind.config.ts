@@ -16,11 +16,11 @@ const config: Config = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    styled:false,
+    styled: false,
     themes: [
       {
         dark: {
-          primary: "#1432CD",
+          primary: "#1432CD",          
           "primary-content": "#030821",
           "base-100": "#01030E",
           "base-content": "#D9D9D9",
@@ -32,6 +32,7 @@ const config: Config = {
             "background-color": "#01030E",
             padding: "1.5rem",
           },
+          ".bg-primary-lighter": { "background-color": "#7284E1" },
           ".container-fit": {
             "border-color": "#303133",
             "border-width": "2.5px",

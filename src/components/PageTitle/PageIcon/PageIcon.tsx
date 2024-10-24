@@ -3,7 +3,8 @@
 import { FaGraduationCap } from "react-icons/fa";
 import { IoFolderOpen } from "react-icons/io5";
 import { MdOutlineWork } from "react-icons/md";
-import { FaEnvelope } from "react-icons/fa";
+import { IoMdContact } from "react-icons/io";
+
 
 type Props = { currentPageId: string; size?: number };
 
@@ -20,7 +21,7 @@ function PageIcon({ currentPageId, size }: Props) {
     projects: <IoFolderOpen {...iconProps} />,
     experience: <MdOutlineWork {...iconProps} />,
     education: <FaGraduationCap {...iconProps} />,
-    contact: <FaEnvelope {...iconProps} />,
+    contact: <IoMdContact {...iconProps} />,
   };
 
   return <div>{pageIcons[currentPageId]}</div>;
