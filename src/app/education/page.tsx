@@ -21,6 +21,7 @@ export default function Education() {
             title={item.title}
             subtitle={item.subtitle}
             skills={item.skills}
+            url={item.url}
           ></EducationItem>
         ))}
       </div>
