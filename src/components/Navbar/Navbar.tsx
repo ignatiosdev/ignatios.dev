@@ -46,8 +46,8 @@ function Navbar({}: Props) {
   }
 
   return (
-    <div className="container-default">
-      <div className="flex justify-between w-2/3 gap-2">
+    <div className="container-fit lg:container-default p-2">
+      <div className="flex justify-between lg:w-2/3 lg:gap-2 overflow-scroll lg:overflow-visible py-3 lg:p-0">
         {pagesIndex.map((item) => (
           <NavbarItems
             key={item.id}

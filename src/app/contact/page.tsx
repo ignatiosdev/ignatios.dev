@@ -37,7 +37,8 @@ export default function Contact() {
 
           <div className="py-5 flex flex-col gap-y-5">
             <span className="font-bold text-lg">Download my resume</span>
-            <div className="flex gap-6">
+            <div className="flex flex-col lg:flex-row gap-6 ">
+              
               <ResumeDownloadButton
                 text="RESUME"
                 language="en"

@@ -12,7 +12,7 @@ function ResumeDownloadButton({ text, language }: Props) {
   };
 
   return (
-    <button className="bg-primary w-60 h-10 rounded-lg font-bold text-2xl">
+    <button className="bg-primary w-60 h-10 rounded-lg font-bold text-lg lg:text-2xl ps-2 lg:ps-0">
       <div className="flex w-full h-full ">
         <div className="w-1/5 flex justify-end items-center">
         {languages[language]}
