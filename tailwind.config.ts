@@ -20,7 +20,7 @@ const config: Config = {
     themes: [
       {
         dark: {
-          primary: "#1432CD",          
+          primary: "#1432CD",
           "primary-content": "#030821",
           "base-100": "#01030E",
           "base-content": "#D9D9D9",
@@ -49,6 +49,9 @@ const config: Config = {
             color: "#D9D9D9",
             opacity: 0.6,
             "font-size": "1rem",
+          },
+          ".scrollbar-primary": {
+            "scrollbar-color": "#1432CD",
           },
         },
       },

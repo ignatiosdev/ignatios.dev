@@ -7,11 +7,11 @@ type Props = { text: string; active?: boolean, onClick : React.MouseEventHandler
 function NavbarItems({onClick, text, active }: Props) {
     
   return (
-    <button
+    <button 
     onClick={onClick}
       className={
         "text-xl font-bold uppercase py-1 px-4 " +
-        (active ? "border rounded-xl border-primary" : "")
+        (active ? "border-2 rounded-xl border-primary" : "")
       }
     >
       {text}

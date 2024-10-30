@@ -10,5 +10,33 @@
 body {
   font-size: 1rem;
   font-family: Inter;
-  color: #D9D9D9;
+  color: #d9d9d9;
+}
+
+@layer components {
+  .scrollbar-primary {
+    @apply overflow-x-scroll;
+  }
+
+  .scrollbar-primary::-webkit-scrollbar-track {
+    background: theme(
+      "colors.primary"
+    ); /* Primary color for the scrollbar handle */
+    visibility: hidden;
+    border-radius: 10px;
+  }
+
+  .scrollbar-primary::-webkit-scrollbar-thumb {
+    visibility: hidden;
+    border-radius: 10px;
+  }
+
+  .scrollbar-primary:hover:-webkit-scrollbar-thumb {
+    visibility: visible;
+  }
+
+  /* For Firefox */
+  .scrollbar-primary {
+    scrollbar-color: theme("colors.primary") theme("colors.gray.200"); /* Thumb color and track color */
+  }
 }
