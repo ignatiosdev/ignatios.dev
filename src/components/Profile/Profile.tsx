@@ -24,7 +24,7 @@ function Profile({}: Props) {
         </p>
       </div>
 
-      <div className="w-2/3 mx-auto mt-2.5 ">
+      <div className="flex justify-center">
         <ActionButton></ActionButton>
       </div>
     </div>

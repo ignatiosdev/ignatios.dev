@@ -11,7 +11,7 @@ export default function Button({ onClick, text, className }: Props) {
     <button
       onClick={onClick}
       className={
-        `btn bg-primary font-bold ` + className
+        `btn bg-primary font-extrabold` + " " + className
 
       }
     >

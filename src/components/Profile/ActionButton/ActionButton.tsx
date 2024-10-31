@@ -15,7 +15,7 @@ function ActionButton({}: Props) {
     router.push("./contact"); // Navigate to the contact page
   }
 
-  return <Button onClick={action} text="GET IN TOUCH" className="btn-block text-lg" />; // Render the button
+  return <Button onClick={action} text="GET IN TOUCH" className="w-40 text-lg" />; // Render the button
 }
 
 export default ActionButton;

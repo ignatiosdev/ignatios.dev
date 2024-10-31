@@ -19,7 +19,7 @@ export default function RootLayout({
               skills={["JavaScript", "Node.js", "Next.js", "Typescript"]}
             />
           </div>
-          <div className="lg:w-6/12 flex flex-col gap-4">
+          <div className="lg:w-6/12 flex flex-col gap-5 lg:gap-4">
             <Navbar />
             <div className="container-default">{children}</div>
           </div>
