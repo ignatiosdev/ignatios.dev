@@ -13,30 +13,32 @@ body {
   color: #d9d9d9;
 }
 
-@layer components {
-  .scrollbar-primary {
-    @apply overflow-x-scroll;
-  }
 
-  .scrollbar-primary::-webkit-scrollbar-track {
-    background: theme(
-      "colors.primary"
-    ); /* Primary color for the scrollbar handle */
-    visibility: hidden;
-    border-radius: 10px;
-  }
+/* styles.css or a global CSS file */
+.scrollbar-primary::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height for horizontal scrollbars */
+}
 
-  .scrollbar-primary::-webkit-scrollbar-thumb {
-    visibility: hidden;
-    border-radius: 10px;
-  }
+.scrollbar-primary::-webkit-scrollbar-thumb {
+  background-color: theme('colors.primary'); /* Use Tailwind's primary color */
+  border-radius: 4px; /* Round corners */
+}
 
-  .scrollbar-primary:hover:-webkit-scrollbar-thumb {
-    visibility: visible;
-  }
+.scrollbar-primary::-webkit-scrollbar-track {
+  background: transparent; /* Hide the track */
+}
 
-  /* For Firefox */
-  .scrollbar-primary {
-    scrollbar-color: theme("colors.primary") theme("colors.gray.200"); /* Thumb color and track color */
-  }
+.scrollbar-primary::-webkit-scrollbar-button {
+  display: none; /* Hide scrollbar buttons */
+}
+
+.scrollbar-primary {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: theme('colors.primary') transparent; /* Thumb color and track color */
+}
+
+/* Hide the corners */
+.scrollbar-primary::-webkit-scrollbar-corner {
+  background: transparent; /* Ensure the corner is transparent */
 }
