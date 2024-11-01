@@ -1,7 +1,9 @@
+
 import "./globals.css";
 import Profile from "@/components/Profile/Profile";
 import Skills from "@/components/Skills/Skills";
 import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 export default function RootLayout({
   children,
@@ -24,6 +26,8 @@ export default function RootLayout({
             <div className="container-default">{children}</div>
           </div>
         </div>
+        
+        <Footer></Footer>
       </body>
     </html>
   );
