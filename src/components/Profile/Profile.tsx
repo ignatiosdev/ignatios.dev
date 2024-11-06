@@ -12,7 +12,7 @@ function Profile({}: Props) {
       <ProfilePicture profileImg={profileImg}></ProfilePicture>
 
       <div>
-        <h1 className="text-3xl font-bold">Ignacio Cattalurda</h1>
+        <h2 className="text-3xl font-bold">Ignacio Cattalurda</h2>
         <span className="text-subtitle text-sm ">
           Full-stack developer - Maldonado, Uruguay
         </span>
