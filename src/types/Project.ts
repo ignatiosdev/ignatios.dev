@@ -5,6 +5,8 @@ type Project = {
   description: string;
   imagePath: string;
   imageAlt: string;
+  url:string,
+  skills:string
 };
 
 export default Project;

@@ -21,6 +21,7 @@ const config: Config = {
       {
         dark: {
           primary: "#1432CD",
+          info: "#303133",
           "primary-content": "#030821",
           "base-100": "#01030E",
           "base-content": "#D9D9D9",

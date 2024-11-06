@@ -1,6 +1,5 @@
 "use client"
 
-""
 
 type Props = { text: string; active?: boolean, onClick : React.MouseEventHandler<HTMLButtonElement> };
 
