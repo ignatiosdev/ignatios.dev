@@ -10,8 +10,8 @@ function page({ params }: { params: { projectUrl: string } }) {
   return (
     <>
       <h1 className="text-2xl font-bold">{currentProject?.title}</h1>
-      <div className="flex py-5 gap-1">
-        <div className="w-6/12 text-lg font-medium flex-col flex gap-4  ">
+      <div className="flex gap-8 flex-col-reverse lg:flex-row py-5 lg:gap-1">
+        <div className="w-full lg:w-6/12 text-lg font-medium flex-col flex gap-5 lg:gap-4  ">
           <p>{currentProject?.description}</p>
           <span className="text-subtitle"> {currentProject?.skills}</span>
           <div className="flex gap-2">
@@ -23,7 +23,7 @@ function page({ params }: { params: { projectUrl: string } }) {
             </a>
           </div>
         </div>
-        <div className="w-6/12 px-6">
+        <div className="w-full lg:w-6/12 lg:px-6">
           <img src="/img/projects/1.png"></img>
         </div>
       </div>
