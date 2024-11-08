@@ -1,12 +1,20 @@
-
 type Project = {
   id: number;
-  title: string;
-  description: string;
+  title: {
+    en: string;
+    es: string;
+  };
+  description: {
+    en: string;
+    es: string;
+  };
   imagePath: string;
-  imageAlt: string;
-  url:string,
-  skills:string
+  imageAlt: {
+    en: string;
+    es: string;
+  };
+  url: string;
+  skills: string;
 };
 
 export default Project;

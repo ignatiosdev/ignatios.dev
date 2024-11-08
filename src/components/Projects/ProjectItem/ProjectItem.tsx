@@ -1,7 +1,16 @@
-import Project from "@/types/Project";
-import Link from "next/link";
 
-function ProjectItem({ id, title, description, imagePath, imageAlt,url }: Project) {
+import {Link} from "@/i18n/routing";
+
+
+type Props = {
+  title: string;
+  description: string;
+  imagePath: string;
+  imageAlt: string;
+  url: string;
+}
+
+function ProjectItem({ title, description, imagePath, imageAlt,url }: Props) {
   return (
     <Link href={`/${url}`}>
       <div className="card card-compact bg-base-100 w-full shadow-xl container-fit cursor-pointer p-3">

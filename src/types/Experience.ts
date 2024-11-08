@@ -1,9 +1,16 @@
-
 type Experience = {
-    title: string,
-    description:string
-    date:string
+  title: {
+    en: string;
+    es: string;
   };
-  
-  export default Experience;
-  
+  description: {
+    en: string;
+    es: string;
+  };
+  date: {
+    en: string;
+    es: string;
+  };
+};
+
+export default Experience;

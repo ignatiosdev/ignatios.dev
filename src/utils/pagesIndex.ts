@@ -1,14 +1,26 @@
 interface NavigationItem {
   id: string;
-  label: string;
+  labels: { en: string; es: string };
   path: string;
 }
 
 const pagesIndex: NavigationItem[] = [
-  { id: "projects", label: "Projects", path: "/" },
-  { id: "experience", label: "Experience", path: "/experience" },
-  { id: "education", label: "Education", path: "/education" },
-  { id: "contact", label: "Contact", path: "/contact" },
+  { id: "projects", labels: { en: "Projects", es: "Proyectos" }, path: "/" },
+  {
+    id: "experience",
+    labels: { en: "Experience", es: "Experiencia" },
+    path: "/experience",
+  },
+  {
+    id: "education",
+    labels: { en: "Education", es: "Educación" },
+    path: "/education",
+  },
+  {
+    id: "contact",
+    labels: { en: "Contact", es: "Contacto" },
+    path: "/contact",
+  },
 ];
 
 export default pagesIndex;

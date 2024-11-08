@@ -5,21 +5,25 @@ import pagesIndex from "@/utils/pagesIndex.ts";
 import { setCurrentPageId } from "@/utils/localStorageHelper.ts";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { useRouter } from "next/navigation";
 
+import { useRouter } from "@/i18n/routing";
 
 type Props = {};
 
 function Navbar({}: Props) {
   const router = useRouter();
+
   const pathname = usePathname();
+
+  // Extract the locale from the pathname. Assuming it's in the format /{locale}/page
+  const locale = pathname.split("/")[1] as "en" | "es";
 
   // State to track the current page
   const [currentPageId, setCurrentPageIdState] = useState(
     pathname === "/" ? "projects" : pathname.slice(1) // Normalize pathname
   );
 
-  // Effect to listen for changes currentPageId global state
+  // Effect to listen for changes in currentPageId global state
   useEffect(() => {
     const handlePageChange = (event: CustomEvent) => {
       const newValue = event.detail;
@@ -41,6 +45,7 @@ function Navbar({}: Props) {
 
   // Function to change the page and update localStorage
   function changePage(path: string, id: string) {
+    // You may need to include locale in the path when navigating
     router.push(path);
     setCurrentPageId(id);
   }
@@ -52,7 +57,7 @@ function Navbar({}: Props) {
           <NavbarItems
             key={item.id}
             onClick={() => changePage(item.path, item.id)}
-            text={item.label}
+            text={item.labels[locale] || item.labels.en}
             active={item.id === currentPageId}
           />
         ))}
