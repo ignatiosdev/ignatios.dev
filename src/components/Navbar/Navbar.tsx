@@ -2,11 +2,12 @@
 
 import NavbarItems from "@/components/Navbar/NavbarItems/NavbarItems";
 import pagesIndex from "@/utils/pagesIndex.ts";
+
 import { setCurrentPageId } from "@/utils/localStorageHelper.ts";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-
 import { useRouter } from "@/i18n/routing";
+import { useGetLocale } from "@/hooks/useGetLocale";
 
 type Props = {};
 
@@ -15,12 +16,11 @@ function Navbar({}: Props) {
 
   const pathname = usePathname();
 
-  // Extract the locale from the pathname. Assuming it's in the format /{locale}/page
-  const locale = pathname.split("/")[1] as "en" | "es";
 
+  const locale = useGetLocale()
   // State to track the current page
   const [currentPageId, setCurrentPageIdState] = useState(
-    pathname === "/" ? "projects" : pathname.slice(1) // Normalize pathname
+    pathname === "/en" || "/es" ? "projects" : pathname.slice(1) // Normalize pathname
   );
 
   // Effect to listen for changes in currentPageId global state
