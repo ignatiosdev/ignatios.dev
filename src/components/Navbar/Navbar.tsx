@@ -1,5 +1,6 @@
 "use client";
 
+import SettingsMenu from "../SettingsMenu/SettingsMenu";
 import NavbarItems from "@/components/Navbar/NavbarItems/NavbarItems";
 import pagesIndex from "@/utils/pagesIndex.ts";
 
@@ -16,8 +17,7 @@ function Navbar({}: Props) {
 
   const pathname = usePathname();
 
-
-  const locale = useGetLocale()
+  const locale = useGetLocale();
   // State to track the current page
   const [currentPageId, setCurrentPageIdState] = useState(
     pathname === "/en" || "/es" ? "projects" : pathname.slice(1) // Normalize pathname
@@ -51,7 +51,7 @@ function Navbar({}: Props) {
   }
 
   return (
-    <div className="container-fit lg:container-default px-4 py-3 ">
+    <div className="container-fit lg:container-default px-4 py-3 flex">
       <div className="flex justify-between overflow-x-scroll scrollbar scrollbar-primary lg:overflow-visible py-4 lg:p-0 md:gap-0 xl:gap-2 lg:w-2/3">
         {pagesIndex.map((item) => (
           <NavbarItems
@@ -61,6 +61,10 @@ function Navbar({}: Props) {
             active={item.id === currentPageId}
           />
         ))}
+
+        <div className="flex items-center ">
+          <SettingsMenu></SettingsMenu>
+        </div>
       </div>
     </div>
   );
