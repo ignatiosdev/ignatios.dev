@@ -5,21 +5,32 @@ import { FaEnvelope } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 
-export default function Contact() {
+// Translation Imports
+import { getTranslations } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
+
+export default async function Contact({
+  params,
+}: {
+  params: { locale: "en" | "es" };
+}) {
+
+    // Ensure static rendering by making locale available at build time
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("contact");
+
   return (
     <>
       <PageTitle
         iconSize={45}
         currentPageId="contact"
-        text="Contact me"
+        text={t("pageTitle")}
       ></PageTitle>
 
       <div className="px-2 py-4 ">
-        <p>
-          I’d love to hear from you! Please feel free to email me or reach out
-          on LinkedIn. I look forward to hearing from you and will respond as
-          soon as possible.
-        </p>
+        <p>{t("paragraph")}</p>
 
         <div className="flex flex-col gap-y-4 py-6">
           <div className="flex items-center gap-4">
@@ -36,9 +47,8 @@ export default function Contact() {
           </div>
 
           <div className="py-5 flex flex-col gap-y-5">
-            <span className="font-bold text-lg">Download my resume</span>
+            <span className="font-bold text-lg">{t("downloadresume")}</span>
             <div className="flex flex-col lg:flex-row gap-6 ">
-              
               <ResumeDownloadButton
                 text="RESUME"
                 language="en"

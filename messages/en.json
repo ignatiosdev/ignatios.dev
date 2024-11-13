@@ -1,0 +1,26 @@
+{
+  "global": {
+    "locale": "en"
+  },
+  "profile": {
+    "aboutText": "I code for us to be more efficient, for life to be easier, and for our time to be more enjoyable.",
+    "actionBtnText": "GET IN TOUCH"
+  },
+  "contact": {
+    "pageTitle": "Contact me",
+    "paragraph": "Id love to hear from you! Please feel free to email me or reach out on LinkedIn. I look forward to hearing from you and will respond as soon as possible.",
+    "downloadresume": "Download my resume"
+  },
+  "education": {
+    "pageTitle": "Education"
+  },
+  "experience": {
+    "pageTitle": "Experience"
+  },
+  "projects": {
+    "pageTitle": "Projects"
+  },
+  "projectInfo": {
+    "projectBtn": "VISIT PROJECT"
+  }
+}

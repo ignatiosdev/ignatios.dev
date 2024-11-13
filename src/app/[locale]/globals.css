@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: Inter;
-  src: url("./../fonts/Inter.ttf");
+  src: url("../../fonts/Inter.ttf");
 }
 
 body {
@@ -41,4 +41,10 @@ body {
 /* Hide the corners */
 .scrollbar-primary::-webkit-scrollbar-corner {
   background: transparent; /* Ensure the corner is transparent */
+}
+
+
+
+button,h1,h2,h3,h4,h5,h6{
+  caret-color: transparent;
 }

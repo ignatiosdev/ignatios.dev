@@ -1,0 +1,27 @@
+{
+  "global": {
+    "locale": "es"
+  },
+  "profile": {
+    "aboutText": "Codifico para que seamos más eficientes, para que la vida sea más fácil y para que nuestro tiempo sea más agradable.",
+    "actionBtnText": "CONTÁCTAME"
+  },
+  "contact": {
+    "pageTitle": "Contáctame",
+    "paragraph": "¡Me encantaría saber de ti! No dudes en enviarme un correo electrónico o contactarme por LinkedIn. Espero tu mensaje y responderé lo antes posible.",
+    "downloadresume": "Descargar mi currículum"
+  },
+  "education": {
+    "pageTitle": "Educación"
+  },
+  "experience": {
+    "pageTitle": "Experiencia"
+  },
+  "projects": {
+    "pageTitle": "Proyectos"
+  }
+  ,
+  "projectInfo": {
+    "projectBtn" :"VER PROYECTO"
+  }
+}

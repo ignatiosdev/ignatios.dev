@@ -1,8 +1,8 @@
 
 type Education = {
-    title: string,
-    subtitle:string
-    skills:string,
+    title: {en:string, es:string},
+    subtitle:{en:string,es:string}
+    skills:{en:string,es:string},
     url:string
   };
   

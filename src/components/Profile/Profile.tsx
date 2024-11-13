@@ -1,12 +1,15 @@
-""
-
 import ProfilePicture from "@/components/Profile/ProfilePicture/ProfilePicture";
 import profileImg from "../../assets/img/profileImage.png";
 import ActionButton from "@/components/Profile/ActionButton/ActionButton";
 
+import { useTranslations } from "next-intl";
+
 type Props = {};
 
+
+
 function Profile({}: Props) {
+  const t = useTranslations("profile")
   return (
     <div className="flex flex-col text-center gap-4 container-default">
       <ProfilePicture profileImg={profileImg}></ProfilePicture>
@@ -19,13 +22,12 @@ function Profile({}: Props) {
       </div>
       <div className="text-subtitle">
         <p>
-          I code for us to be more efficient, for life to be easier, and for our
-          time to be more enjoyable.
+          {t("aboutText")}
         </p>
       </div>
 
       <div className="flex justify-center">
-        <ActionButton></ActionButton>
+        <ActionButton text={t("actionBtnText")}></ActionButton>
       </div>
     </div>
   );
