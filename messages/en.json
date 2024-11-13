@@ -1,7 +1,6 @@
 {
-
-  "global" : {
-    "locale" : "en"
+  "global": {
+    "locale": "en"
   },
   "profile": {
     "aboutText": "I code for us to be more efficient, for life to be easier, and for our time to be more enjoyable.",
@@ -19,7 +18,9 @@
     "pageTitle": "Experience"
   },
   "projects": {
-    "pageTitle": "Projects",
-    "locale" : "en"
+    "pageTitle": "Projects"
+  },
+  "projectInfo": {
+    "projectBtn": "VISIT PROJECT"
   }
 }

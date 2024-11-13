@@ -1,6 +1,7 @@
 import projectsData from "@/data/projects";
 
 // Translation Imports
+import { getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
 
 async function ProjectInfo({
@@ -16,7 +17,7 @@ async function ProjectInfo({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  
+  const t = await getTranslations("projectInfo");
 
   return (
     <>
@@ -29,7 +30,7 @@ async function ProjectInfo({
             <button className="btn border-2 border-info">Github</button>
             <a href={`https://${currentProject?.url}`} target="_blank">
               <button className="btn border-2 border-primary text-lg font-bold">
-                VISIT PROJECT
+                {t("projectBtn")}
               </button>
             </a>
           </div>

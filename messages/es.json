@@ -18,7 +18,10 @@
     "pageTitle": "Experiencia"
   },
   "projects": {
-    "pageTitle": "Proyectos",
-    "locale": "es"
+    "pageTitle": "Proyectos"
+  }
+  ,
+  "projectInfo": {
+    "projectBtn" :"VER PROYECTO"
   }
 }
