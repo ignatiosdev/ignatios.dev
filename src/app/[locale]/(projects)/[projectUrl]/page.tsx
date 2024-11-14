@@ -4,26 +4,33 @@ import projectsData from "@/data/projects";
 import { getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
 
-async function ProjectInfo({
+// Definimos el tipo de Params como una Promesa
+type Params = Promise<{ projectUrl: string; locale: "en" | "es" }>;
+
+export default async function ProjectInfo({
   params,
 }: {
-  params: { projectUrl: string; locale: "en" | "es" };
+  params: Params;
 }) {
-  let currentProject = projectsData.find(
-    (project) => project.url === params.projectUrl
-  );
+  // Esperamos a que la promesa de `params` se resuelva
+  const { projectUrl, locale } = await params;
 
-  // Ensure static rendering by making locale available at build time
-  const { locale } = await params;
+  // Ajustamos la configuración del locale
   setRequestLocale(locale);
 
+  // Obtenemos el proyecto actual
+  const currentProject = projectsData.find(
+    (project) => project.url === projectUrl
+  );
+
+  // Obtenemos las traducciones
   const t = await getTranslations("projectInfo");
 
   return (
     <>
       <h1 className="text-2xl font-bold">{currentProject?.title[locale]}</h1>
       <div className="flex gap-8 flex-col-reverse lg:flex-row py-5 lg:gap-1">
-        <div className="w-full lg:w-6/12 text-lg font-medium flex-col flex gap-5 lg:gap-4  ">
+        <div className="w-full lg:w-6/12 text-lg font-medium flex-col flex gap-5 lg:gap-4">
           <p>{currentProject?.description[locale]}</p>
           <span className="text-subtitle"> {currentProject?.skills}</span>
           <div className="flex gap-2">
@@ -36,11 +43,9 @@ async function ProjectInfo({
           </div>
         </div>
         <div className="w-full lg:w-6/12 lg:px-6">
-          <img src="/img/projects/1.png"></img>
+          <img src="/img/projects/1.png" alt="Project Image" />
         </div>
       </div>
     </>
   );
 }
-
-export default ProjectInfo;

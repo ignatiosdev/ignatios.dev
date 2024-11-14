@@ -9,12 +9,14 @@ import Skills from "@/components/Skills/Skills";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 
+type Params = Promise<{locale: "en" | "es" }>;
+
 export default async function RootLayout({
   children,
   params
 }: {
   children: React.ReactNode;
-  params: {locale: string};
+  params: Params;
 }) {
   const { locale } = await params; // Awaiting the `params` object here.
 
