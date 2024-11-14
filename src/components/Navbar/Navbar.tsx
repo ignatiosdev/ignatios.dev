@@ -52,7 +52,7 @@ function Navbar({}: Props) {
 
   return (
     <div className="container-fit lg:container-default px-4 py-3 flex">
-      <div className="flex justify-between overflow-x-scroll scrollbar scrollbar-primary lg:overflow-visible py-4 lg:p-0 md:gap-0 xl:gap-2 lg:w-2/3">
+      <div className="flex justify-between overflow-x-scroll scrollbar scrollbar-primary md:overflow-visible py-4 lg:p-0 md:gap-0 xl:gap-2 lg:w-2/3">
         {pagesIndex.map((item) => (
           <NavbarItems
             key={item.id}
@@ -62,7 +62,7 @@ function Navbar({}: Props) {
           />
         ))}
 
-        <div className="flex items-center ">
+        <div className="md:flex items-center hidden px-5">
           <SettingsMenu></SettingsMenu>
         </div>
       </div>
