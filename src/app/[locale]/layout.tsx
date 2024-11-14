@@ -56,6 +56,7 @@ export default async function RootLayout({
           <Footer></Footer>
         </NextIntlClientProvider>
       </body>
+      <Analytics></Analytics>
     </html>
   );
 }
