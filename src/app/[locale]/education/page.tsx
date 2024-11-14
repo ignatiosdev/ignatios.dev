@@ -6,10 +6,12 @@ import educationData from "@/data/education";
 import { getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
 
+type Params = Promise<{locale: "en" | "es" }>;
+
 export default async function Education({
   params,
 }: {
-  params: { locale: "en" | "es" };
+  params: Params;
 }) {
   
   // Ensure static rendering by making locale available at build time
