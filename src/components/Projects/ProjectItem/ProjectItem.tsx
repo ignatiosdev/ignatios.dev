@@ -15,8 +15,8 @@ function ProjectItem({ title, description, imagePath, imageAlt,url }: Props) {
     <Link href={`/${url}`}>
       <div className="card card-compact bg-base-100 w-full shadow-xl container-fit cursor-pointer p-3">
         <figure className="px-4 pt-4 ">
-          <img src={imagePath} alt={imageAlt} className="rounded-md" />{" "}
-          {/* Remove the `url()` wrapper */}
+          <img src={imagePath} alt={imageAlt} className="rounded-md" />
+          
         </figure>
         <div className="card-body">
           <h1 className="text-xl font-bold">{title}</h1>

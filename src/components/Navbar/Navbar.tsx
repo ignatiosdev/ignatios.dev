@@ -51,8 +51,9 @@ function Navbar({}: Props) {
   }
 
   return (
-    <div className="container-fit lg:container-default px-4 py-3 flex">
-      <div className="flex justify-between overflow-x-scroll scrollbar scrollbar-primary md:overflow-visible py-4 lg:p-0 md:gap-0 xl:gap-2 lg:w-2/3">
+    <>
+    <div className="container-fit flex px-4 py-3 lg:p-6  lg:pe-0">
+      <div className="flex justify-between overflow-x-scroll scrollbar scrollbar-primary md:overflow-visible py-4 lg:p-0 lg:w-2/3 text-xl gap-4 lg:gap-0 lg:text-base  xl:text-lg  xl:gap-1 2xl:text-xl 2xl:gap-2">
         {pagesIndex.map((item) => (
           <NavbarItems
             key={item.id}
@@ -61,12 +62,15 @@ function Navbar({}: Props) {
             active={item.id === currentPageId}
           />
         ))}
-
-        <div className="md:flex items-center hidden px-5">
-          <SettingsMenu></SettingsMenu>
-        </div>
+      </div>
+  
+      {/* Add ml-auto to push SettingsMenu to the right */}
+      <div className="md:flex items-center hidden xl:px-2 ml-auto">
+        <SettingsMenu />
       </div>
     </div>
+  </>
+  
   );
 }
 
