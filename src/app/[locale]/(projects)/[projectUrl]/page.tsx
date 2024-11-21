@@ -1,3 +1,7 @@
+import { IoArrowBackOutline } from "react-icons/io5";
+
+import { Link } from "@/i18n/routing";
+
 import projectsData from "@/data/projects";
 
 // Translation Imports
@@ -7,11 +11,7 @@ import { setRequestLocale } from "next-intl/server";
 // Definimos el tipo de Params como una Promesa
 type Params = Promise<{ projectUrl: string; locale: "en" | "es" }>;
 
-export default async function ProjectInfo({
-  params,
-}: {
-  params: Params;
-}) {
+export default async function ProjectInfo({ params }: { params: Params }) {
   // Esperamos a que la promesa de `params` se resuelva
   const { projectUrl, locale } = await params;
 
@@ -28,7 +28,12 @@ export default async function ProjectInfo({
 
   return (
     <>
-      <h1 className="text-2xl font-bold">{currentProject?.title[locale]}</h1>
+      <div className="flex items-center gap-3">
+        <Link href={"/"}>
+          <IoArrowBackOutline className="text-subtitle-darker" size={28}/>
+        </Link>
+        <h1 className="text-2xl font-bold">{currentProject?.title[locale]}</h1>
+      </div>
       <div className="flex gap-8 flex-col-reverse lg:flex-row py-5 lg:gap-1">
         <div className="w-full lg:w-6/12 text-lg font-medium flex-col flex gap-5 lg:gap-4">
           <p>{currentProject?.description[locale]}</p>

@@ -3,17 +3,25 @@ import profileImg from "../../assets/img/profileImage.png";
 import ActionButton from "@/components/Profile/ActionButton/ActionButton";
 
 import { useTranslations } from "next-intl";
+import LanguageDropdown from "../LanguageDropdown/LanguageDropdown";
 
 type Props = {};
 
-
-
 function Profile({}: Props) {
-  const t = useTranslations("profile")
+  const t = useTranslations("profile");
   return (
     <div className="flex flex-col text-center gap-4 container-default">
-      <ProfilePicture profileImg={profileImg}></ProfilePicture>
-
+      <div className="flex">
+        <div className="w-2/12"></div>
+        <div className="w-8/12">
+          <ProfilePicture profileImg={profileImg}></ProfilePicture>
+        </div>
+        <div className="w-2/12">
+          <div className="md:hidden flex flex-col">
+            <LanguageDropdown></LanguageDropdown>
+          </div>
+        </div>
+      </div>
       <div>
         <h2 className="text-3xl font-bold">Ignacio Cattalurda</h2>
         <span className="text-subtitle text-sm ">
@@ -21,9 +29,7 @@ function Profile({}: Props) {
         </span>
       </div>
       <div className="text-subtitle">
-        <p>
-          {t("aboutText")}
-        </p>
+        <p>{t("aboutText")}</p>
       </div>
 
       <div className="flex justify-center">

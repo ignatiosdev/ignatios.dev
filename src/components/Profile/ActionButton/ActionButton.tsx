@@ -15,7 +15,7 @@ function ActionButton({ text }: Props) {
     router.push("/contact"); // Navigate to the contact page
   }
 
-  return <Button onClick={action} text={text} className="w-40 text-lg" />; // Render the button
+  return <Button onClick={action} text={text} className="w-40 text-lg text-base-100 font-semibold" />; // Render the button
 }
 
 export default ActionButton;

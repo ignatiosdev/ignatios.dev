@@ -20,26 +20,26 @@ const config: Config = {
     themes: [
       {
         dark: {
-          primary: "#1432CD",
+          primary: "#14CD5B",
           info: "#303133",
-          "primary-content": "#030821",
-          "base-100": "#01030E",
+          "primary-content": "#02190B",
+          "base-100": "#010502",
           "base-content": "#D9D9D9",
           ".container-default": {
-            "border-color": "#303133",
+            "border-color": "#101211",
             "border-width": "2.5px",
             "border-style": "solid",
             "border-radius": "15px",
-            "background-color": "#01030E",
+            "background-color": "#010502",
             padding: "1.5rem",
           },
-          ".bg-primary-lighter": { "background-color": "#7284E1" },
+          ".bg-primary-lighter": { "background-color": "#72E19D" },
           ".container-fit": {
-            "border-color": "#303133",
+            "border-color": "#101211",
             "border-width": "2.5px",
             "border-style": "solid",
             "border-radius": "15px",
-            "background-color": "#01030E",
+            "background-color": "#010502",
           },
 
           ".text-subtitle": {
@@ -52,7 +52,7 @@ const config: Config = {
             "font-size": "1rem",
           },
           ".scrollbar-primary": {
-            "scrollbar-color": "#1432CD",
+            "scrollbar-color": "#14CD5B",
           },
         },
       },

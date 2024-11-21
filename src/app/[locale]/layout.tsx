@@ -13,6 +13,7 @@ import Skills from "@/components/Skills/Skills";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 
+
 type Params = Promise<{locale: "en" | "es" }>;
 
 export default async function RootLayout({
@@ -41,7 +42,7 @@ export default async function RootLayout({
       <body>
         <NextIntlClientProvider messages={messages}>
           <div className="min-h-screen">
-            <div className="bg-primary w-full h-24 lg:h-36 absolute -z-10 top-0"></div>
+            <div style={{ backgroundImage: 'url(/img/hexagons.png)' }} className="w-full h-28 absolute -z-10 top-0"></div>
             <div className="flex flex-col lg:flex-row mt-16 justify-center gap-5  px-6 lg:px-0 z-10">
               <div className="flex flex-col lg:w-1/5 gap-5">
                 <Profile />
