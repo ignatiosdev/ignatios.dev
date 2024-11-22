@@ -23,7 +23,7 @@ export default async function Education({
   return (
     <>
       <PageTitle
-        iconSize={43}
+        iconSize={40}
         currentPageId="education"
         text={t("pageTitle")}
       />
