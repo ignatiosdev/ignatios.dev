@@ -15,11 +15,11 @@ function ResumeDownloadButton({ text, language }: Props) {
     <button className="bg-primary w-60 h-10 rounded-lg font-semibold text-lg lg:text-2xl ps-2 lg:ps-0">
       <div className="flex w-full h-full ">
         <div className="w-1/5 flex justify-end items-center">
-        {languages[language]}
+          {languages[language]}
         </div>
-        <div className="w-3/5 flex  justify-center items-center">{text}</div>
+        <div className="w-3/5 flex  justify-center items-center dark:text-base-100">{text}</div>
         <div className="w-1/5 rounded-e-lg bg-primary-lighter flex justify-center items-center">
-          <MdOutlineFileDownload size={35} className="text-base-100" />
+          <MdOutlineFileDownload size={35} className="dark:text-base-100 " />
         </div>
       </div>
     </button>
