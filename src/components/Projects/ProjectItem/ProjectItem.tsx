@@ -13,7 +13,7 @@ type Props = {
 function ProjectItem({ title, description, imagePath, imageAlt,url }: Props) {
   return (
     <Link href={`/${url}`}>
-      <div className="card card-compact bg-base-100 w-full shadow-xl container-fit cursor-pointer p-3">
+      <div className="card card-compact bg-base-100 w-full container-fit cursor-pointer p-3 transition-all duration-300 hover:scale-102">
         <figure className="px-4 pt-4 ">
           <img src={imagePath} alt={imageAlt} className="rounded-md" />
           

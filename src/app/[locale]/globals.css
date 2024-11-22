@@ -10,9 +10,15 @@
 body {
   font-size: 1rem;
   font-family: Inter;
+}
+
+[data-theme="dark"] body {
   color: #d9d9d9;
 }
 
+[data-theme="light"] body {
+  color: #0C0D0C;
+}
 
 /* styles.css or a global CSS file */
 .scrollbar-primary::-webkit-scrollbar {
@@ -21,7 +27,7 @@ body {
 }
 
 .scrollbar-primary::-webkit-scrollbar-thumb {
-  background-color: theme('colors.primary'); /* Use Tailwind's primary color */
+  background-color: theme("colors.primary"); /* Use Tailwind's primary color */
   border-radius: 4px; /* Round corners */
 }
 
@@ -35,7 +41,7 @@ body {
 
 .scrollbar-primary {
   scrollbar-width: thin; /* For Firefox */
-  scrollbar-color: theme('colors.primary') transparent; /* Thumb color and track color */
+  scrollbar-color: theme("colors.primary") transparent; /* Thumb color and track color */
 }
 
 /* Hide the corners */
@@ -43,8 +49,12 @@ body {
   background: transparent; /* Ensure the corner is transparent */
 }
 
-
-
-button,h1,h2,h3,h4,h5,h6{
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   caret-color: transparent;
 }
