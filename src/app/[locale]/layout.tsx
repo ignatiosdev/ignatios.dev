@@ -6,6 +6,9 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import type { Metadata } from "next";
+import Script from "next/script";
+
 import { setRequestLocale } from "next-intl/server";
 import "./globals.css";
 import Profile from "@/components/Profile/Profile";
@@ -13,8 +16,12 @@ import Skills from "@/components/Skills/Skills";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 
-import Script from "next/script";
 import Providers from "./providers";
+
+export const metadata: Metadata = {
+  title: "Ignatios.dev",
+  description: "...",
+};
 
 type Params = Promise<{ locale: "en" | "es" }>;
 
