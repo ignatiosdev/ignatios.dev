@@ -17,11 +17,23 @@ function ActionButton({ text }: Props) {
 
   return (
     <>
-   
-
-      <button  onClick={action} className=" text-lg font-semibold before:ease relative h-12 w-40 overflow-hidden border border-primary bg-primary text-white shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-primary hover:before:-translate-x-40 rounded-lg">
-      <span className="relative z-10">{text}</span>
-    </button>
+      <button
+        onClick={action}
+        className="
+    text-lg font-semibold
+    relative h-12 w-40 overflow-hidden 
+    border border-primary bg-primary text-white 
+    shadow-2xl dark:shadow-none transition-all 
+    rounded-lg
+    before:absolute before:right-0 before:top-0 
+    before:h-12 before:w-6 before:translate-x-12 before:rotate-6 
+    before:bg-white before:opacity-15 before:duration-700
+    hover:shadow-primary hover:before:-translate-x-40
+    active:scale-110
+  "
+      >
+        <span className="relative z-10">{text}</span>
+      </button>
     </>
   );
 }

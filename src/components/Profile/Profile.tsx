@@ -3,7 +3,7 @@ import profileImg from "../../assets/img/profileImage.png";
 import ActionButton from "@/components/Profile/ActionButton/ActionButton";
 
 import { useTranslations } from "next-intl";
-import LanguageDropdown from "../LanguageDropdown/LanguageDropdown";
+import SettingsMenu from "../SettingsMenu/SettingsMenu";
 
 type Props = {};
 
@@ -18,7 +18,7 @@ function Profile({}: Props) {
         </div>
         <div className="w-2/12">
           <div className="md:hidden flex flex-col">
-            <LanguageDropdown></LanguageDropdown>
+            <SettingsMenu></SettingsMenu>
           </div>
         </div>
       </div>

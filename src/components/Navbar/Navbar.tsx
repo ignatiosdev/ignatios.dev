@@ -60,7 +60,7 @@ function Navbar({}: Props) {
 
   return (
     <>
-      <div className="container-fit flex px-4 py-3 lg:p-6  lg:pe-0">
+      <div className="container-fit flex px-4 py-3 lg:p-6 lg:pe-0 xl:pe-4">
         <div className="flex justify-between overflow-x-scroll scrollbar scrollbar-primary md:overflow-visible py-4 lg:p-0 lg:w-2/3 text-xl gap-4 lg:gap-0 lg:text-base  xl:text-lg  xl:gap-1 2xl:text-xl 2xl:gap-2">
           {pagesIndex.map((item) => (
             <NavbarItems

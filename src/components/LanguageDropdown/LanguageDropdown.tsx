@@ -17,20 +17,20 @@ function LanguageDropdown({}: Props) {
   };
 
   return (
-    <div className="dropdown dropdown-bottom">
-      <button className="btn" tabIndex={0} onClick={() => console.log("Dropdown button clicked")}>
-        <IoLanguage size={25} />
+    <div className="dropdown dropdown-bottom px-0 ">
+      <button className="btn bg-transparent btn-ghost p-2" tabIndex={0} onClick={() => console.log("Dropdown button clicked")}>
+        <IoLanguage className="w-7 h-7" />
       </button>
 
-      <ul className="menu dropdown-content bg-info bg-opacity-80 rounded-lg z-[1] w-full gap-y-2 py-2 justify-around text-base font-medium">
+      <ul className="menu dropdown-content bg-info bg-opacity-80 rounded-lg z-[1] gap-y-1 w-full py-2 px-0 justify-around text-base font-medium mt-1">
         <li className="cursor-pointer p-2" tabIndex={0}>
-          <button className="flex justify-center z-10" onClick={() => changeLanguage("es")}>
+          <button className="flex justify-center z-10 p-0" onClick={() => changeLanguage("es")}>
             <EsFlag width={25} />
           </button>
         </li>
 
         <li className="cursor-pointer p-2" tabIndex={0}>
-          <button className="flex justify-center" onClick={() => changeLanguage("en")}>
+          <button className="flex justify-center p-0" onClick={() => changeLanguage("en")}>
             <EngFlag width={25} />
           </button>
         </li>
