@@ -6,19 +6,13 @@ import projectsData from "@/data/projects";
 import { getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
 
+type Params = Promise<{ locale: "en" | "es" }>;
 
-type Params = Promise<{locale: "en" | "es" }>;
-
-export default async function ProjectsPage({
-  params,
-}: {
-  params: Params;  
-}) {
-  
+export default async function ProjectsPage({ params }: { params: Params }) {
   // Ensure static rendering by making locale available at build time
-  const { locale } = await params; 
-  setRequestLocale(locale);  
-  
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   const t = await getTranslations("projects");
 
   return (
@@ -32,10 +26,10 @@ export default async function ProjectsPage({
             <div key={project.id} className="w-full lg:w-1/2 p-3">
               <ProjectItem
                 title={project.title[locale]} // TypeScript knows `locale` is "en" or "es"
-                description={project.description[locale]} // Same here
+                shortDescription={project.shortDescription[locale]} // Same here
                 imagePath={project.imagePath}
                 imageAlt={project.imageAlt[locale]} // And here
-                url={project.url}
+                id={project.id}
               />
             </div>
           ))}
