@@ -6,16 +6,14 @@ export function ThemeController() {
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
-    // This will change the Daisyui theme through next-theme
-    setTheme(theme === "light" ? "dark" : "light");
-    // Then we still need to tell Tailwind if we're using a light or dark theme to use Tailwind's 'dark:' modifier
-    document.documentElement.classList.remove(
-      theme === "light" ? "light" : "dark"
-    );
-    document.documentElement.classList.add(
-      theme === "light" ? "dark" : "light"
-    );
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme); // This updates the theme state in `next-themes`.
+  
+    // Optional: Synchronize Tailwind's class manually in case of conflicts
+    document.documentElement.classList.remove(theme === "light" ? "light" : "dark");
+    document.documentElement.classList.add(newTheme);
   };
+  
 
   return (
     <label

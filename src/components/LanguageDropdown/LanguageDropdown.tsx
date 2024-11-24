@@ -12,9 +12,14 @@ function LanguageDropdown({}: Props) {
   const router = useRouter();
 
   const changeLanguage = (locale: string) => {
-    console.log("Changed language to:", locale);
+    console.log('Changed language to:', locale);
     router.replace(pathname, { locale });
+  
+    // Sync theme class
+    const theme = localStorage.getItem('theme') || 'light';
+    document.documentElement.classList.add(theme);
   };
+  
 
   return (
     <div className="dropdown dropdown-bottom px-0 ">
