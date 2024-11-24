@@ -12,7 +12,6 @@ type Project = {
     en: string;
     es: string;
   };
-  imagePath: string;
   imageAlt: {
     en: string;
     es: string;

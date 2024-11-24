@@ -7,7 +7,7 @@ const projectsData: Project[] = [
       en: "Abbate.uy",
       es: "Abbate.uy",
     },
-    imagePath: "/img/projects/abbate.uy.png",
+
     shortDescription: {
       en: "Website for the nationally recognized company Abbate Servicios Funebres, where users can consult service dates and locations...",
       es: "Sitio web para la nacionalmente reconocida empresa Abbate Servicios Funebres, donde los usuarios pueden consultar fechas y lugares de los servicios...",
@@ -31,7 +31,7 @@ const projectsData: Project[] = [
       en: "",
       es: "",
     },
-    imagePath: "/img/projects/.png",
+    
     shortDescription: {
       en: "",
       es: "",
@@ -54,7 +54,7 @@ const projectsData: Project[] = [
       en: "MikroTik SSTP VPN Configurator",
       es: "MikroTik SSTP VPN Configurator",
     },
-    imagePath: "/img/projects/Mikrotik-SSTP-VPN-Configurator.png",
+
     shortDescription: {
       en: "A command line tool that automates the entire process of setting up an SSTP virtual private network on MikroTik routers. This script handles everything from...",
       es: "Una herramienta de línea de comandos que automatiza el proceso de configuración de una red privada virtual SSTP en routers MikroTik. Este script se encarga de...",
@@ -77,7 +77,7 @@ const projectsData: Project[] = [
       en: "Excel Multiple File Opening Fix",
       es: "Excel-Multiple-File-Opening-Fix",
     },
-    imagePath: "/img/projects/Excel-Multiple-File-Opening-Fix.png",
+
     shortDescription: {
       en: "This PowerShell script fixes the common issue of delays when opening multiple Excel files while another instance is already running. By updating specific...",
       es: "Este script de PowerShell soluciona el problema común de los retrasos al abrir múltiples archivos de Excel mientras otra instancia ya está en ejecución...",
@@ -100,7 +100,7 @@ const projectsData: Project[] = [
       en: "eMercado",
       es: "eMercado",
     },
-    imagePath: "/img/projects/eMercado-ecommerce-frontend.png",
+
     shortDescription: {
       en: "eMercado is a front-end eCommerce simulation that mimics the user experience of an online store. It showcases products across various categories...",
       es: "eMercado es una simulación front-end de eCommerce que imita la experiencia de usuario de una tienda en línea. Muestra productos en varias...",

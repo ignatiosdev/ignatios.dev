@@ -5,7 +5,6 @@ import { Link } from "@/i18n/routing";
 type Props = {
   title: string;
   shortDescription: string;
-  imagePath: string;
   imageAlt: string;
   id: string;
 };
@@ -13,7 +12,6 @@ type Props = {
 function ProjectItem({
   title,
   shortDescription,
-  imagePath,
   imageAlt,
   id,
 }: Props) {
@@ -32,7 +30,7 @@ function ProjectItem({
     <Link href={`/${id}`}>
       <div className="card card-compact bg-base-100 w-full container-fit cursor-pointer p-3 transition-all duration-300 hover:scale-102 h-full">
         <figure className="px-4 pt-4 ">
-          <img src={imagePath} alt={imageAlt} className="rounded-md aspect-video s" />
+          <img src={`/img/projects/${id}.png`} alt={imageAlt} className="rounded-md aspect-video s" />
         </figure>
         <div className="card-body">
           <h1 className="text-xl font-bold">{title}</h1>
