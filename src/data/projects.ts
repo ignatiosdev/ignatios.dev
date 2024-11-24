@@ -100,7 +100,7 @@ const projectsData: Project[] = [
       en: "eMercado",
       es: "eMercado",
     },
-    imagePath: "/img/projects/emercado-ecommerce-frontend.png",
+    imagePath: "/img/projects/eMercado-ecommerce-frontend.png",
     shortDescription: {
       en: "eMercado is a front-end eCommerce simulation that mimics the user experience of an online store. It showcases products across various categories...",
       es: "eMercado es una simulación front-end de eCommerce que imita la experiencia de usuario de una tienda en línea. Muestra productos en varias...",
