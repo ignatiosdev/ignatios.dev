@@ -54,15 +54,15 @@ export default async function Contact({ params }: { params: Params }) {
           </div>
 
           <div className="py-5 flex flex-col gap-y-5">
-            <span className="font-bold text-lg">{t("downloadresume")}</span>
+            <span className="font-bold text-lg">{t("downloadResumeLabel")}</span>
             <div className="flex flex-col lg:flex-row gap-6 ">
               <ResumeDownloadButton
-                text="RESUME"
+                text={t("downloadResumeBtn")}
                 language="en"
               ></ResumeDownloadButton>
 
               <ResumeDownloadButton
-                text="RESUME"
+                text={t("downloadResumeBtn")}
                 language="es"
               ></ResumeDownloadButton>
             </div>
