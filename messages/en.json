@@ -18,7 +18,8 @@
     "pageTitle": "Experience"
   },
   "projects": {
-    "pageTitle": "Projects"
+    "pageTitle": "Projects",
+    "readMore":"Read more"
   },
   "projectInfo": {
     "projectBtn": "VISIT PROJECT"

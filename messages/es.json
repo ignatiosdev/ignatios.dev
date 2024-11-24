@@ -18,7 +18,8 @@
     "pageTitle": "Experiencia"
   },
   "projects": {
-    "pageTitle": "Proyectos"
+    "pageTitle": "Proyectos",
+    "readMore":"Leer más"
   }
   ,
   "projectInfo": {

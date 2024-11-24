@@ -57,7 +57,7 @@ const projectsData: Project[] = [
 
     shortDescription: {
       en: "A command line tool that automates the entire process of setting up an SSTP virtual private network on MikroTik routers. This script handles everything from...",
-      es: "Una herramienta de línea de comandos que automatiza el proceso de configuración de una red privada virtual SSTP en routers MikroTik. Este script se encarga de...",
+      es: "Una herramienta de línea de comandos que automatiza el proceso de configuración de una red privada virtual SSTP en routers MikroTik...",
     },
     fullDescription: {
       en: "A command line tool that automates the entire process of setting up an SSTP virtual private network (VPN) on MikroTik routers. This script handles everything from Dynamic DNS (DDNS) and SSL certificate configuration to IP pools, VPN profiles, firewall rules, and user creation.\n Perfect for both home and enterprise environments, it offers a secure, customizable and hassle-free VPN setup solution.",
