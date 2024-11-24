@@ -27,7 +27,7 @@ export default async function Contact({
   return (
     <>
       <PageTitle
-        iconSize={45}
+        iconSize={40}
         currentPageId="contact"
         text={t("pageTitle")}
       ></PageTitle>

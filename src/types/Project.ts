@@ -1,10 +1,14 @@
 type Project = {
-  id: number;
+  id: string;
   title: {
     en: string;
     es: string;
   };
-  description: {
+  shortDescription: {
+    en: string;
+    es: string;
+  };
+  fullDescription: {
     en: string;
     es: string;
   };
@@ -13,8 +17,9 @@ type Project = {
     en: string;
     es: string;
   };
-  url: string;
+  url?: string;
   skills: string;
+  github?:string
 };
 
 export default Project;

@@ -26,7 +26,7 @@ export default async function Experience({
 
   return (
     <>
-       <PageTitle currentPageId="experience" text={t("pageTitle")} />
+       <PageTitle    iconSize={40} currentPageId="experience" text={t("pageTitle")} />
       <div className="-ms-0.5 pt-1.5">
         <Timeline
           sx={{

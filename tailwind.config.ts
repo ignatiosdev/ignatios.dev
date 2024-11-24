@@ -27,14 +27,14 @@ const config: Config = {
           primary: "#14CD5B",
           info: "#303133",
           "primary-content": "#02190B",
-          "base-100": "#010502",
+          "base-100": "#050806",
           "base-content": "#D9D9D9",
           ".container-default": {
             "border-color": "#101211",
             "border-width": "2.5px",
             "border-style": "solid",
             "border-radius": "15px",
-            "background-color": "#010502",
+            "background-color": "#050806",
             padding: "1.5rem",
           },
           ".bg-primary-lighter": { "background-color": "#72E19D" },
@@ -43,7 +43,7 @@ const config: Config = {
             "border-width": "2.5px",
             "border-style": "solid",
             "border-radius": "15px",
-            "background-color": "#010502",
+            "background-color": "#050806",
           },
 
           ".text-subtitle": {
@@ -66,8 +66,8 @@ const config: Config = {
           "base-100": "#F0F2F2",
           "base-content": "#0C0D0C",
           ".container-default": {
-            "border-color": "#D7D9D7",
-            "border-width": "0px",
+            "border-color": "transparent",
+            "border-width": "2.5px",
             "border-style": "solid",
             "border-radius": "15px",
             "box-shadow":
@@ -77,8 +77,8 @@ const config: Config = {
           },
           ".bg-primary-lighter": { "background-color": "#72E19D" },
           ".container-fit": {
-            "border-width": "0px",
-            "border-color": "#D7D9D7",
+            "border-width": "2.5px",
+            "border-color": "transparent",
             "border-style": "solid",
             "border-radius": "15px",
             "background-color": "#F0F2F2",
