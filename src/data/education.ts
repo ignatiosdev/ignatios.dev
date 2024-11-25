@@ -20,7 +20,7 @@ const educationData: Education[] = [
     url: "https://drive.google.com/file/d/1KsMW3PT8jihzDkpKKPRNSHe_Il1khArw/view?usp=sharing",
   },
   {
-    title: { en: "C1 Advanced: Full professional proficiency", es: "C1 Avanzado: Competencia profesional completa" },
+    title: { en: "C1 Advanced: Full professional proficiency", es: "C1 Advanced: Competencia profesional completa" },
     subtitle: { en: "Anglo | Cambridge English 2022", es: "Anglo | Cambridge English 2022" },
     skills: { en: "English", es: "Inglés" },
     url: "https://drive.google.com/file/d/12lJcInZx91TZU1HIsO5gTtv7Vm72sO13/view?usp=sharing",
