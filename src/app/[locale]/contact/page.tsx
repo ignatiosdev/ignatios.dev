@@ -37,7 +37,7 @@ export default async function Contact({ params }: { params: Params }) {
           <div className="flex items-center gap-4">
             <FaLinkedinIn size={28} className="text-primary"></FaLinkedinIn>
             <a
-              href="www.linkedin.com/in/ignatiosdev"
+              href="https://linkedin.com/in/ignatiosdev"
               className="font-medium text-lg underline" target="_blank"
             >
               ignatiosdev
