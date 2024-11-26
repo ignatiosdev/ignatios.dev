@@ -1,5 +1,5 @@
 import ProfilePicture from "@/components/Profile/ProfilePicture/ProfilePicture";
-import profileImg from "../../assets/img/profileImage.png";
+import profileImg from "../../assets/img/profileImage.webp";
 import ActionButton from "@/components/Profile/ActionButton/ActionButton";
 
 import { useTranslations } from "next-intl";
