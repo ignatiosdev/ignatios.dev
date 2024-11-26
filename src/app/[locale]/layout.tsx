@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Inter } from "next/font/google";
 
 import { setRequestLocale } from "next-intl/server";
 import "./globals.css";
@@ -22,6 +23,13 @@ export const metadata: Metadata = {
   title: "Ignatios.dev",
   description: "...",
 };
+
+// Optimize Inter font
+const inter = Inter({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+});
 
 type Params = Promise<{ locale: "en" | "es" }>;
 
@@ -46,7 +54,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html className={inter.className} lang={locale} suppressHydrationWarning>
       <body>
         <Script id="theme-detector">{`
           const theme = document.documentElement.style.colorScheme
@@ -57,7 +65,7 @@ export default async function RootLayout({
           <Providers>
             <div className="min-h-screen">
               <div
-                style={{ backgroundImage: "url(/img/hexagons.png)" }}
+                style={{ backgroundImage: "url(/img/hexagons.webp)",backgroundSize:"cover" }}
                 className="w-full h-28 absolute -z-10 top-0"
               ></div>
               <div className="flex flex-col lg:flex-row mt-16 justify-center gap-5  px-6 lg:px-0 z-10">
