@@ -76,7 +76,7 @@ export default async function ProjectInfo({ params }: { params: Params }) {
         </div>
         <div className="w-full lg:w-6/12 lg:px-6">
           <img
-            src={`/img/projects/${currentProject?.id}.png`}
+            src={`/img/projects/${currentProject?.id}.webp`}
             alt={currentProject?.imageAlt[locale]}
           />
         </div>

@@ -19,7 +19,7 @@ async function ProjectItem({ title, shortDescription, imageAlt, id }: Props) {
       <div className="card card-compact bg-base-100 w-full container-fit cursor-pointer p-3 transition-all duration-300 hover:scale-102 h-full">
         <figure className="px-4 pt-4 ">
           <img
-            src={`/img/projects/${id}.png`}
+            src={`/img/projects/${id}.webp`}
             alt={imageAlt}
             className="rounded-md aspect-video s"
           />
