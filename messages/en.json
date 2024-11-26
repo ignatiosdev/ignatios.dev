@@ -9,7 +9,8 @@
   "contact": {
     "pageTitle": "Contact me",
     "paragraph": "Id love to hear from you! Please feel free to email me or reach out on LinkedIn. I look forward to hearing from you and will respond as soon as possible.",
-    "downloadresume": "Download my resume"
+    "downloadResumeLabel": "Download my resume",
+    "downloadResumeBtn": "RESUME"
   },
   "education": {
     "pageTitle": "Education"
@@ -18,7 +19,8 @@
     "pageTitle": "Experience"
   },
   "projects": {
-    "pageTitle": "Projects"
+    "pageTitle": "Projects",
+    "readMore": "Read more"
   },
   "projectInfo": {
     "projectBtn": "VISIT PROJECT"

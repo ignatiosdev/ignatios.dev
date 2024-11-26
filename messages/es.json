@@ -9,7 +9,8 @@
   "contact": {
     "pageTitle": "Contáctame",
     "paragraph": "¡Me encantaría saber de ti! No dudes en enviarme un correo electrónico o contactarme por LinkedIn. Espero tu mensaje y responderé lo antes posible.",
-    "downloadresume": "Descargar mi currículum"
+    "downloadResumeLabel": "Descargar mi currículum",
+    "downloadResumeBtn" : "CV"
   },
   "education": {
     "pageTitle": "Educación"
@@ -18,7 +19,8 @@
     "pageTitle": "Experiencia"
   },
   "projects": {
-    "pageTitle": "Proyectos"
+    "pageTitle": "Proyectos",
+    "readMore":"Leer más"
   }
   ,
   "projectInfo": {

@@ -27,7 +27,6 @@ export default async function ProjectsPage({ params }: { params: Params }) {
               <ProjectItem
                 title={project.title[locale]} // TypeScript knows `locale` is "en" or "es"
                 shortDescription={project.shortDescription[locale]} // Same here
-                imagePath={project.imagePath}
                 imageAlt={project.imageAlt[locale]} // And here
                 id={project.id}
               />

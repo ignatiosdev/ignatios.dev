@@ -58,13 +58,16 @@ export default async function ProjectInfo({ params }: { params: Params }) {
           <div className="flex gap-2 pt-4">
             {currentProject?.github && (
               <a href={`https://${currentProject?.github}`} target="_blank">
-                <button className="btn px-4 border-2 border-info"><FaGithub size={28}/>Github</button>
+                <button className="btn bg-transparent hover:bg-transparent hover:border-info px-4 border-2 border-info">
+                  <FaGithub size={28} />
+                  Github
+                </button>
               </a>
             )}
 
             {currentProject?.url && (
               <a href={`https://${currentProject?.url}`} target="_blank">
-                <button className="btn border-2 border-primary text-lg font-bold">
+                <button className="btn bg-transparent hover:bg-transparent hover:border-primary border-2 border-primary text-lg font-bold">
                   {t("projectBtn")}
                 </button>
               </a>
@@ -73,7 +76,7 @@ export default async function ProjectInfo({ params }: { params: Params }) {
         </div>
         <div className="w-full lg:w-6/12 lg:px-6">
           <img
-            src={currentProject?.imagePath}
+            src={`/img/projects/${currentProject?.id}.png`}
             alt={currentProject?.imageAlt[locale]}
           />
         </div>
