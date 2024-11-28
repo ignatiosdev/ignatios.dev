@@ -10,7 +10,7 @@ const educationData: Education[] = [
   {
     title: { en: "Scrum Master Certification", es: "Certificación Scrum Master" },
     subtitle: { en: "LearnQuest 2023", es: "LearnQuest 2023" },
-    skills: { en: "Scrum - Project Management - Agile", es: "Scrum - Gestión de Proyectos - Ágil" },
+    skills: { en: "Scrum - Project Management - Agile", es: "Scrum - Gestión de Proyectos - Agile" },
     url: "https://www.coursera.org/account/accomplishments/specialization/ZMMZTJT9JK69",
   },
   {
