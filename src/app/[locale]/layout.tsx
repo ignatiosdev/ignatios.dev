@@ -75,7 +75,7 @@ export default async function RootLayout({
                 <div className="flex flex-col lg:w-3/12 xl:w-1/5 gap-5">
                   <Profile />
                   <Skills
-                    skills={["JavaScript", "Node.js", "Next.js", "Typescript"]}
+                    skills={["Next.js","React.js","Typescript","Python","Node.js", "Docker", "SQL","CSS"]}
                   />
                 </div>
                 <div className="lg:w-7/12  xl:w-6/12 flex flex-col gap-5 xl:gap-4">
