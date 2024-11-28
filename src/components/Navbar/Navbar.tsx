@@ -1,14 +1,17 @@
 "use client";
 
+import useHorizontalOverflow from "@/hooks/useHorizontalOverflow";
 import SettingsMenu from "../SettingsMenu/SettingsMenu";
 import NavbarItems from "@/components/Navbar/NavbarItems/NavbarItems";
 import pagesIndex from "@/utils/pagesIndex.ts";
+import SwipeHint from "./SwipeHint";
 
 import { setCurrentPageId } from "@/utils/localStorageHelper.ts";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { useRouter } from "@/i18n/routing";
 import { useGetLocale } from "@/hooks/useGetLocale";
+import useHasScrolled from "@/hooks/useHasScrolled";
 
 type Props = {};
 
@@ -58,10 +61,27 @@ function Navbar({}: Props) {
     setCurrentPageId(id);
   }
 
+  const navbarRef = useRef<HTMLDivElement>(null);
+  const hasOverflow = useHorizontalOverflow(navbarRef);
+
+
+  const threshold = 100; // Example threshold
+  const navbarHasBeenScrolled = useHasScrolled(navbarRef, threshold);
+
+
   return (
     <>
-      <div className="container-fit flex px-4 py-3 lg:p-6 lg:pe-0 xl:pe-4">
-        <div className="flex justify-between overflow-x-scroll scrollbar scrollbar-primary md:overflow-visible py-4 lg:p-0 lg:w-2/3 text-xl gap-4 lg:gap-0 lg:text-base  xl:text-lg  xl:gap-1 2xl:text-xl 2xl:gap-2">
+      <div className="container-fit flex px-4 py-3 lg:p-6 lg:pe-0 xl:pe-4 relative">
+        {/* Navbar container */}
+        <div
+          id="navbar"
+  
+          ref={navbarRef}
+          className="flex overflow-x-scroll scrollbar scrollbar-primary py-4 lg:p-0 w-full text-xl gap-4 lg:gap-0 lg:text-base  xl:text-lg  xl:gap-1 2xl:text-xl 2xl:gap-2"
+        >
+          {/* Path (for swipe animation) */}
+
+          {/* Navbar items */}
           {pagesIndex.map((item) => (
             <NavbarItems
               key={item.id}
@@ -72,10 +92,12 @@ function Navbar({}: Props) {
           ))}
         </div>
 
-        {/* Add ml-auto to push SettingsMenu to the right */}
-        <div className="md:flex items-center hidden xl:px-2 ml-auto">
+        {/* Settings Menu */}
+        <div className="md:flex items-center hidden xl:px-2 ml-auto md:w-2/12">
           <SettingsMenu />
         </div>
+
+        <SwipeHint hasBeenScrolled={navbarHasBeenScrolled} navbarIsScrollable={hasOverflow}></SwipeHint>
       </div>
     </>
   );
