@@ -4,7 +4,7 @@ import useHorizontalOverflow from "@/hooks/useHorizontalOverflow";
 import SettingsMenu from "../SettingsMenu/SettingsMenu";
 import NavbarItems from "@/components/Navbar/NavbarItems/NavbarItems";
 import pagesIndex from "@/utils/pagesIndex.ts";
-import SwipeHint from "./SwipeHint";
+import SwipeHintAnimation from "./SwipeHintAnimation";
 
 import { setCurrentPageId } from "@/utils/localStorageHelper.ts";
 import { useState, useEffect, useRef } from "react";
@@ -22,14 +22,13 @@ function Navbar({}: Props) {
 
   function normalizePathname(pathname: string) {
     let normalizedPathname = pathname.split("/").at(-1);
-    console.log(normalizedPathname);
     return normalizedPathname;
   }
 
   const locale = useGetLocale();
   // State to track the current page
   const [currentPageId, setCurrentPageIdState] = useState(
-    normalizePathname(pathname) == "en" || normalizePathname(pathname) == "es"
+    normalizePathname(pathname) == "" || normalizePathname(pathname) == "es"
       ? "projects"
       : normalizePathname(pathname)
   );
@@ -77,7 +76,7 @@ function Navbar({}: Props) {
           id="navbar"
   
           ref={navbarRef}
-          className="flex overflow-x-scroll scrollbar scrollbar-primary py-4 lg:p-0 w-full text-xl gap-4 lg:gap-0 lg:text-base  xl:text-lg  xl:gap-1 2xl:text-xl 2xl:gap-2"
+          className="flex overflow-x-scroll scrollbar sm:overflow-auto scrollbar-primary py-4 lg:p-0 w-full text-xl gap-4 lg:gap-0 lg:text-base  xl:text-lg  xl:gap-1 2xl:text-xl 2xl:gap-2"
         >
           {/* Path (for swipe animation) */}
 
@@ -97,7 +96,7 @@ function Navbar({}: Props) {
           <SettingsMenu />
         </div>
 
-        <SwipeHint hasBeenScrolled={navbarHasBeenScrolled} navbarIsScrollable={hasOverflow}></SwipeHint>
+        <SwipeHintAnimation hasBeenScrolled={navbarHasBeenScrolled} navbarIsScrollable={hasOverflow}></SwipeHintAnimation>
       </div>
     </>
   );
