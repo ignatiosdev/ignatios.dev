@@ -77,7 +77,7 @@ function Navbar({}: Props) {
           id="navbar"
   
           ref={navbarRef}
-          className="flex overflow-x-scroll scrollbar scrollbar-primary py-4 lg:p-0 w-full text-xl gap-4 lg:gap-0 lg:text-base  xl:text-lg  xl:gap-1 2xl:text-xl 2xl:gap-2"
+          className="flex overflow-x-scroll scrollbar sm:overflow-auto scrollbar-primary py-4 lg:p-0 w-full text-xl gap-4 lg:gap-0 lg:text-base  xl:text-lg  xl:gap-1 2xl:text-xl 2xl:gap-2"
         >
           {/* Path (for swipe animation) */}
 
