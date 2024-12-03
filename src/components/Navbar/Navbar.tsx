@@ -4,7 +4,7 @@ import useHorizontalOverflow from "@/hooks/useHorizontalOverflow";
 import SettingsMenu from "../SettingsMenu/SettingsMenu";
 import NavbarItems from "@/components/Navbar/NavbarItems/NavbarItems";
 import pagesIndex from "@/utils/pagesIndex.ts";
-import SwipeHint from "./SwipeHint";
+import SwipeHintAnimation from "./SwipeHintAnimation";
 
 import { setCurrentPageId } from "@/utils/localStorageHelper.ts";
 import { useState, useEffect, useRef } from "react";
@@ -97,7 +97,7 @@ function Navbar({}: Props) {
           <SettingsMenu />
         </div>
 
-        <SwipeHint hasBeenScrolled={navbarHasBeenScrolled} navbarIsScrollable={hasOverflow}></SwipeHint>
+        <SwipeHintAnimation hasBeenScrolled={navbarHasBeenScrolled} navbarIsScrollable={hasOverflow}></SwipeHintAnimation>
       </div>
     </>
   );
