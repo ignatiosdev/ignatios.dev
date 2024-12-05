@@ -1,4 +1,10 @@
 {
+  "layout": {
+    "metadata": {
+      "title": "Ignatios.dev - Ignacio Cattalurda's Software Development Portfolio - Projects, Education and Experience",
+      "description": "Welcome to Ignacio Cattalurda's portfolio. Discover my work in software development, web design, and innovative projects. Learn about my experience and skills in building efficient, user-focused solutions. Let’s work together and create something great!"
+    }
+  },
   "global": {
     "locale": "en"
   },
