@@ -18,36 +18,12 @@ const projectsData: Project[] = [
     },
     imageAlt: {
       en: "Screenshot of the Abbate.uy website showing the main section",
-      es: "Captura de pantalla de la página web Abbate.uy donde se ve la seccion principal",
+      es: "Captura de pantalla de la página web Abbate.uy donde se ve la sección principal",
     },
     url: "abbate.uy",
     skills:
       "React.js - JavaScript - TailwindCSS - SQL - Node.js - Docker - Debian/Linux",
   },
-
-  /* {
-    id: 0,
-    title: {
-      en: "",
-      es: "",
-    },
-    
-    shortDescription: {
-      en: "",
-      es: "",
-    },
-    fullDescription: {
-      en: "",
-      es: "",
-    },
-    imageAlt: {
-      en: "",
-      es: "",
-    },
-    url: "",
-    skills: "", 
-    github:""
-  }, */
   {
     id: "MikroTik-SSTP-VPN-Configurator",
     title: {

@@ -65,17 +65,20 @@ export default async function RootLayout({
           <Providers>
             <div className="min-h-screen">
               <div
-                style={{ backgroundImage: "url(/img/hexagons.webp)",backgroundSize:"cover" }}
+                style={{
+                  backgroundImage: "url(/img/hexagons.webp)",
+                  backgroundSize: "cover",
+                }}
                 className="w-full h-28 absolute -z-10 top-0"
               ></div>
-              <div className="flex flex-col lg:flex-row mt-16 justify-center gap-5  px-6 lg:px-0 z-10">
-                <div className="flex flex-col lg:w-1/5 gap-5">
+              <div className="flex flex-col lg:flex-row mt-16 justify-center gap-5  px-6 xl:px-0 z-10 ">
+                <div className="flex flex-col lg:w-3/12 xl:w-1/5 gap-5">
                   <Profile />
                   <Skills
-                    skills={["JavaScript", "Node.js", "Next.js", "Typescript"]}
+                    skills={["Next.js","React.js","Typescript","Python","Node.js", "Docker", "SQL","CSS"]}
                   />
                 </div>
-                <div className="lg:w-6/12 flex flex-col gap-5 lg:gap-4">
+                <div className="lg:w-7/12  xl:w-6/12 flex flex-col gap-5 xl:gap-4">
                   <Navbar />
                   <div className="container-default">{children}</div>
                 </div>

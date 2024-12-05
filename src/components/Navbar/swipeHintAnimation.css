@@ -1,0 +1,77 @@
+/* animation.css */
+
+/* Hand animation */
+
+/* Hand icon */
+.hand-icon {
+  position: absolute;
+  top: 55%; /* Center vertically */
+  transform: translateY(0%); /* Fine-tune vertical centering */
+  right: 0%; /* Start at the right side of the container */
+  background-image: url("https://i.postimg.cc/8556gm60/hand.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 25px;
+  height: 100px;
+  animation: swipe-hand 3.5s ease-in-out infinite; /* Apply the swipe-hand animation */
+  transform-origin: center center;
+}
+
+@keyframes swipe-hand {
+  0% {
+    transform: translateX(-20px) rotate(30deg); /* Start from the right */
+  }
+  5% {
+    transform: translateX(-20px) rotate(30deg); /* Start from the right */
+  }
+  50% {
+    transform: translateX(-100px) rotate(-15deg); /* Move to the left and rotate */
+  }
+  100% {
+    transform: translateX(-20px) rotate(30deg); /* End in the center */
+  }
+}
+
+/* Path element following the hand */
+.path {
+  content: "";
+  width: 10px;
+  height: 15px;
+  position: absolute;
+  padding: 0;
+  border-radius: 10px;
+  top: 80%; /* Adjust vertical position */
+  right: 0; /* Initial horizontal position */
+  animation: swipe-path 3.5s ease-in-out infinite; /* Sync with hand movement */
+
+  /*     margin-left: 20px; */
+}
+
+/* Path animation to follow the hand */
+@keyframes swipe-path {
+  0% {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+
+  7% {
+    transform: translateX(-25px);
+    opacity: 0;
+  }
+  8% {
+    transform: translateX(-25px);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(-50px);
+    width: 70px;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
