@@ -4,9 +4,9 @@ import { setCurrentPageId } from "@/utils/localStorageHelper.ts";
 import Button from "@/components/Button/Button";
 import { useRouter } from "@/i18n/routing";
 
-type Props = { text: string };
+type Props = { text: string; ariaLabel: string };
 
-function ActionButton({ text }: Props) {
+function ActionButton({ text, ariaLabel }: Props) {
   const router = useRouter(); // Initialize router for navigation
 
   // Function to handle button click
@@ -19,6 +19,8 @@ function ActionButton({ text }: Props) {
     <>
       <button
         onClick={action}
+        aria-label={ariaLabel}
+        type="button"
         className="
     text-lg font-semibold
     relative h-12 w-40 overflow-hidden 
