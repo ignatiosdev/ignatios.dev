@@ -10,7 +10,8 @@
   },
   "profile": {
     "aboutText": "I code for us to be more efficient, for life to be easier, and for our time to be more enjoyable.",
-    "actionBtnText": "GET IN TOUCH"
+    "actionBtnText": "GET IN TOUCH",
+    "actionBtnAriaLabel": "Go to the contact section"
   },
   "contact": {
     "pageTitle": "Contact me",
