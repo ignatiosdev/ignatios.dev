@@ -1,4 +1,10 @@
 {
+  "layout": {
+    "metadata": {
+      "title": "Ignacio Cattalurda | Portfolio de Desarrollo de Software - Proyectos, Educación y Experiencia",
+      "description": "Bienvenido al portafolio de Ignacio Cattalurda. Descubre mi trabajo en desarrollo de software, diseño web y mis innovadores proyectos. Conoce mi experiencia y habilidades en la creación de soluciones eficientes con un enfoque en el usuario. ¡Trabajemos juntos para crear algo grandioso!"
+    }
+  },
   "global": {
     "locale": "es"
   },

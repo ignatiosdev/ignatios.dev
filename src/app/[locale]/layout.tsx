@@ -25,11 +25,7 @@ import { getTranslations } from "next-intl/server";
 
 const baseUrl = "https://ignatios.dev";
 
-export async function generateMetadata({
-  params: { locale },
-}: {
-  params: { locale: string };
-}) {
+export async function generateMetadata({}: { params: { locale: string } }) {
   const t = await getTranslations("layout.metadata");
 
   return {
