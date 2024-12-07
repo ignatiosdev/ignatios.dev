@@ -1,16 +1,23 @@
 {
+  "layout": {
+    "metadata": {
+      "title": "Ignacio Cattalurda | Portfolio de Desarrollo de Software - Proyectos, Educación y Experiencia",
+      "description": "Bienvenido al portafolio de Ignacio Cattalurda. Descubre mi trabajo en desarrollo de software, diseño web y mis innovadores proyectos. Conoce mi experiencia y habilidades en la creación de soluciones eficientes con un enfoque en el usuario. ¡Trabajemos juntos para crear algo grandioso!"
+    }
+  },
   "global": {
     "locale": "es"
   },
   "profile": {
     "aboutText": "Programo para que seamos más eficientes, para que nuestra vida sea más fácil y para que nuestro tiempo sea más disfrutable.",
-    "actionBtnText": "CONTÁCTAME"
+    "actionBtnText": "CONTÁCTAME",
+    "actionBtnAriaLabel": "Ir a la sección de contacto"
   },
   "contact": {
     "pageTitle": "Contáctame",
     "paragraph": "¡Me encantaría saber de ti! No dudes en enviarme un correo electrónico o contactarme por LinkedIn. Espero tu mensaje y responderé lo antes posible.",
     "downloadResumeLabel": "Descargar mi currículum",
-    "downloadResumeBtn" : "CV"
+    "downloadResumeBtn": "CV"
   },
   "education": {
     "pageTitle": "Educación"
@@ -20,10 +27,9 @@
   },
   "projects": {
     "pageTitle": "Proyectos",
-    "readMore":"Leer más"
-  }
-  ,
+    "readMore": "Leer más"
+  },
   "projectInfo": {
-    "projectBtn" :"VER PROYECTO"
+    "projectBtn": "VER PROYECTO"
   }
 }

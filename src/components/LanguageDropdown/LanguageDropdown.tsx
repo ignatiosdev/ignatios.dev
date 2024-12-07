@@ -12,7 +12,7 @@ function LanguageDropdown({}: Props) {
   const router = useRouter();
 
   const changeLanguage = (locale: string) => {
-    console.log("Changed language to:", locale);
+
     router.replace(pathname, { locale });
   };
 

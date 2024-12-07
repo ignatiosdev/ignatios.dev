@@ -12,7 +12,7 @@ function EducationItem({ title, subtitle, skills, url }: Props) {
   return (
     <div className="flex flex-col px-2 pt-5 gap-y-1">
       <div className="flex gap-x-4 items-baseline pt-1">
-        <h1 className="text-lg font-semibold ">{title}</h1>
+        <h3 className="text-lg font-semibold ">{title}</h3>
         <div>
           <LinkIcon url={url}></LinkIcon>
         </div>

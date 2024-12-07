@@ -23,17 +23,17 @@ function Profile({}: Props) {
         </div>
       </div>
       <div>
-        <h2 className="text-3xl font-bold">Ignacio Cattalurda</h2>
-        <span className="text-subtitle text-sm ">
+        <h1 className="text-3xl font-bold">Ignacio Cattalurda</h1>
+        <h3 className="text-subtitle text-sm ">
           Full-stack developer - Maldonado, Uruguay
-        </span>
+        </h3>
       </div>
       <div className="text-subtitle">
         <p>{t("aboutText")}</p>
       </div>
 
       <div className="flex justify-center">
-        <ActionButton text={t("actionBtnText")}></ActionButton>
+        <ActionButton text={t("actionBtnText")} ariaLabel={t("actionBtnAriaLabel")}></ActionButton>
       </div>
     </div>
   );

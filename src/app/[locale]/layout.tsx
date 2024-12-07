@@ -19,10 +19,27 @@ import Footer from "@/components/Footer/Footer";
 
 import Providers from "./providers";
 
-export const metadata: Metadata = {
-  title: "Ignatios.dev",
-  description: "...",
-};
+import { getTranslations } from "next-intl/server";
+
+// METADATA
+
+const baseUrl = "https://ignatios.dev";
+
+export async function generateMetadata({}: { params: { locale: string } }) {
+  const t = await getTranslations("layout.metadata");
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      canonical: `${baseUrl}`,
+      languages: {
+        en: `${baseUrl}`,
+        es: `${baseUrl}/es`,
+      },
+    },
+  };
+}
 
 // Optimize Inter font
 const inter = Inter({
@@ -75,7 +92,16 @@ export default async function RootLayout({
                 <div className="flex flex-col lg:w-3/12 xl:w-1/5 gap-5">
                   <Profile />
                   <Skills
-                    skills={["Next.js","React.js","Typescript","Python","Node.js", "Docker", "SQL","CSS"]}
+                    skills={[
+                      "Next.js",
+                      "React.js",
+                      "Typescript",
+                      "Python",
+                      "Node.js",
+                      "Docker",
+                      "SQL",
+                      "CSS",
+                    ]}
                   />
                 </div>
                 <div className="lg:w-7/12  xl:w-6/12 flex flex-col gap-5 xl:gap-4">
