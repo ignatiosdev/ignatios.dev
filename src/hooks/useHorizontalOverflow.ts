@@ -9,9 +9,6 @@ const useHorizontalOverflow = (ref: React.RefObject<HTMLDivElement>): boolean =>
       if (ref.current) {
         const isOverflowing = ref.current.scrollWidth > ref.current.clientWidth;
         setHasOverflow(isOverflowing);
-
-        // Log the overflow status
-        console.log(`Navbar overflow: ${isOverflowing ? "Detected" : "Not detected"}`);
       }
     };
 

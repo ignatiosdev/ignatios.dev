@@ -38,7 +38,6 @@ function Navbar({}: Props) {
     const handlePageChange = (event: CustomEvent) => {
       const newValue = event.detail;
       setCurrentPageIdState(newValue);
-      console.log("Page changed to:", newValue);
     };
 
     // Add event listener for the pageChange event
@@ -63,10 +62,8 @@ function Navbar({}: Props) {
   const navbarRef = useRef<HTMLDivElement>(null);
   const hasOverflow = useHorizontalOverflow(navbarRef);
 
-
   const threshold = 100; // Example threshold
   const navbarHasBeenScrolled = useHasScrolled(navbarRef, threshold);
-
 
   return (
     <>
@@ -74,7 +71,6 @@ function Navbar({}: Props) {
         {/* Navbar container */}
         <div
           id="navbar"
-  
           ref={navbarRef}
           className="flex overflow-x-scroll scrollbar sm:overflow-auto scrollbar-primary py-4 lg:p-0 w-full text-xl gap-4 lg:gap-0 lg:text-base  xl:text-lg  xl:gap-1 2xl:text-xl 2xl:gap-2"
         >
@@ -96,7 +92,10 @@ function Navbar({}: Props) {
           <SettingsMenu />
         </div>
 
-        <SwipeHintAnimation hasBeenScrolled={navbarHasBeenScrolled} navbarIsScrollable={hasOverflow}></SwipeHintAnimation>
+        <SwipeHintAnimation
+          hasBeenScrolled={navbarHasBeenScrolled}
+          navbarIsScrollable={hasOverflow}
+        ></SwipeHintAnimation>
       </div>
     </>
   );
