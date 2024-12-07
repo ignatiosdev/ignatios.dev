@@ -8,7 +8,6 @@
   top: 55%; /* Center vertically */
   transform: translateY(0%); /* Fine-tune vertical centering */
   right: 0%; /* Start at the right side of the container */
-  background-image: url("https://i.postimg.cc/8556gm60/hand.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
