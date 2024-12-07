@@ -90,7 +90,7 @@ function Navbar({}: Props) {
               key={item.id}
               onClick={() => changePage(item.path, item.id)}
               text={item.labels[locale] || item.labels.en}
-              active={item.id === currentPageId}
+              active={item.id == currentPageId}
             />
           ))}
         </div>
