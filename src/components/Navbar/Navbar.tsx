@@ -26,11 +26,13 @@ function Navbar({}: Props) {
     return normalizedPathname;
   }
 
+  console.log(pathname);
+
   const locale = useGetLocale();
 
   // State to track the current page
   const [currentPageId, setCurrentPageIdState] = useState(
-    !normalizePathname(pathname) || normalizePathname(pathname) == "es"
+    pathname == "/" || normalizePathname(pathname) == "es"
       ? "projects"
       : normalizePathname(pathname)
   );
