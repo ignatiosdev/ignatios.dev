@@ -21,7 +21,7 @@ function ExperienceItem({ date, title, description }: Props) {
         {" "}
         <div className="flex flex-col ps-3 w-11/12 gap-3">
           <span className="text-subtitle ">{date}</span>
-          <h1 className="text-lg font-bold ">{title}</h1>
+          <h3 className="text-lg font-bold ">{title}</h3>
           <p className="text-subtitle">{description}</p>
         </div>
       </TimelineContent>
