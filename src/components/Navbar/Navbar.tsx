@@ -59,6 +59,10 @@ function Navbar({}: Props) {
     };
   }, []);
 
+  useEffect(() => {
+    console.log("CurrentPageId on mount:", currentPageId); // Log the value when the component is mounted
+  }, []);
+
   // Effect to log when the pageId state is updated
   useEffect(() => {
     console.log("currentPageId updated to:", currentPageId); // Debugging log
@@ -87,14 +91,17 @@ function Navbar({}: Props) {
           className="flex overflow-x-scroll scrollbar sm:overflow-auto scrollbar-primary py-4 lg:p-0 w-full text-xl gap-4 lg:gap-0 lg:text-base xl:text-lg xl:gap-1 2xl:text-xl 2xl:gap-2"
         >
           {/* Navbar items */}
-          {pagesIndex.map((item) => (
-            <NavbarItems
-              key={item.id}
-              onClick={() => changePage(item.path, item.id)}
-              text={item.labels[locale] || item.labels.en}
-              active={item.id == currentPageId}
-            />
-          ))}
+          {pagesIndex.map((item) => {
+            console.log("Item id:", item.id, "CurrentPageId:", currentPageId); // Debugging log
+            return (
+              <NavbarItems
+                key={item.id}
+                onClick={() => changePage(item.path, item.id)}
+                text={item.labels[locale] || item.labels.en}
+                active={item.id === currentPageId}
+              />
+            );
+          })}
         </div>
 
         {/* Settings Menu */}
