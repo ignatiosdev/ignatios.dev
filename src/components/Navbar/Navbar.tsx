@@ -30,7 +30,7 @@ function Navbar({}: Props) {
 
   // State to track the current page
   const [currentPageId, setCurrentPageIdState] = useState(
-    normalizePathname(pathname) == "" || normalizePathname(pathname) == "es"
+    !normalizePathname(pathname) || normalizePathname(pathname) == "es"
       ? "projects"
       : normalizePathname(pathname)
   );
