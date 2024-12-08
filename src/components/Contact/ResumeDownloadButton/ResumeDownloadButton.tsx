@@ -22,7 +22,7 @@ function ResumeDownloadButton({ text, language }: Props) {
   return (
     <button
       onClick={() => {
-        saveAs(resumes[language].path, resumes.en.name);
+        saveAs(resumes[language].path, resumes[language].name);
       }}
       type="button"
       className="bg-primary w-56 h-8  lg:h-10 rounded-lg font-semibold text-lg   lg:text-2xl ps-2 lg:ps-0"
