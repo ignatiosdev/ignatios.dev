@@ -29,6 +29,11 @@ function SwipeHintAnimation({ navbarIsScrollable, hasBeenScrolled }: Props) {
     setAnimationRunning(false);
   }, [hasBeenScrolled]);
 
+  
+  useEffect(() => {
+    setAnimationRunning(false);
+  }, [navbarIsScrollable]);
+
   // Manage animation loop based on scroll and navbar properties
   useEffect(() => {
     let timeoutId: NodeJS.Timeout | null = null;
