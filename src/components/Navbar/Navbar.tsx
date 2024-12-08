@@ -77,7 +77,7 @@ function Navbar({}: Props) {
 
   return (
     <>
-      <div className="container-fit flex px-4 py-3 lg:p-6 lg:py-4 lg:pe-0 xl:pe-4 relative">
+      <div className="container-fit flex px-4 py-3 lg:p-6 lg:py-5 lg:pe-0 xl:pe-4 relative">
         {/* Navbar container */}
         <div
           id="navbar"
