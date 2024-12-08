@@ -9,7 +9,7 @@ function NavbarItems({onClick, text, active }: Props) {
     <button 
     onClick={onClick}
       className={
-        "font-bold uppercase py-1 px-2 border-2 rounded-xl " +
+        "font-bold uppercase py-1 px-1.5 border-2 rounded-xl " +
         (active ? " border-primary" : "border-transparent")
       }
     >
