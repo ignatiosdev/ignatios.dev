@@ -12,12 +12,12 @@ function Profile({}: Props) {
   return (
     <div className="flex flex-col text-center gap-4 container-default">
       <div className="flex">
-        <div className="w-2/12"></div>
-        <div className="w-8/12">
+        <div className="w-2/12 md:hidden"></div>
+        <div className="w-8/12 md:w-full">
           <ProfilePicture profileImg={profileImg}></ProfilePicture>
         </div>
-        <div className="w-2/12">
-          <div className="md:hidden flex flex-col">
+        <div className="w-2/12 md:hidden">
+          <div className="flex flex-col -me-2">
             <SettingsMenu></SettingsMenu>
           </div>
         </div>

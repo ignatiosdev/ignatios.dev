@@ -2,7 +2,7 @@ import Project from "@/types/Project";
 
 const projectsData: Project[] = [
   {
-    id: "abbate.uy",
+    id: "abbateuy",
     title: {
       en: "Abbate.uy",
       es: "Abbate.uy",

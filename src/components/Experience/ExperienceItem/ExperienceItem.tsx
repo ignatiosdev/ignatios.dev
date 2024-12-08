@@ -17,7 +17,7 @@ function ExperienceItem({ date, title, description }: Props) {
         <TimelineDot style={{ backgroundColor: "#14CD5B" }} />
         <TimelineConnector style={{ backgroundColor: "#14CD5B" }} />
       </TimelineSeparator>
-      <TimelineContent>
+      <TimelineContent style={{ paddingRight: "0px" }}>
         {" "}
         <div className="flex flex-col ps-3 w-11/12 gap-3">
           <span className="text-subtitle ">{date}</span>
