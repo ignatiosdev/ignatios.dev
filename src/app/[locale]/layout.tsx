@@ -37,6 +37,21 @@ export async function generateMetadata({}: { params: { locale: string } }) {
         es: `${baseUrl}/es`,
       },
     },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: "ignatios.dev",
+      siteName: "Ignatios Portfolio",
+      images: [
+        {
+          url: "/images/opengraph-image.webp",
+          width: 1200,
+          height: 630,
+          alt: t("opengraph.alt"),
+        },
+      ],
+      type: "website",
+    },
   };
 }
 
