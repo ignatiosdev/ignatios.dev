@@ -52,6 +52,23 @@ export async function generateMetadata({}: { params: { locale: string } }) {
       ],
       type: "website",
     },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: ["/images/opengraph.webp"],
+    },
+    meta: [
+      {
+        name: "author",
+        content: "Ignacio Cattalurda",
+      },
+      {
+        name: "keywords",
+        content:
+          "Ignacio Cattalurda, Ignatios, Ignatios.dev, Cattalurdai, portfolio, developer, Uruguay",
+      },
+    ],
   };
 }
 
@@ -86,6 +103,23 @@ export default async function RootLayout({
 
   return (
     <html className={inter.className} lang={locale} suppressHydrationWarning>
+      <Script id="structured-data" type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://ignatios.dev",
+            "name": "Ignatios Portfolio",
+            "alternateName": "Ignacio Cattalurda",
+            "inLanguage": ["en", "es"],
+            "author": {
+              "@type": "Person",
+              "name": "Ignacio Cattalurda"
+            }
+          }
+        `}
+      </Script>
+
       <body>
         <Script id="theme-detector">{`
           const theme = document.documentElement.style.colorScheme
@@ -102,27 +136,29 @@ export default async function RootLayout({
                 }}
                 className="w-full h-28 absolute -z-10 top-0"
               ></div>
-              <div className="flex flex-col lg:flex-row mt-16 justify-center gap-5  px-6 xl:px-0 z-10 ">
-                <div className="flex flex-col lg:w-3/12 xl:w-1/5 gap-5">
-                  <Profile />
-                  <Skills
-                    skills={[
-                      "Next.js",
-                      "React.js",
-                      "Typescript",
-                      "Python",
-                      "Node.js",
-                      "Docker",
-                      "SQL",
-                      "CSS",
-                    ]}
-                  />
-                </div>
-                <div className="lg:w-7/12  xl:w-6/12 flex flex-col gap-5 xl:gap-4">
-                  <Navbar />
-                  <div className="container-default">{children}</div>
-                </div>
-              </div>
+              <main>
+                <section className="flex flex-col lg:flex-row mt-16 justify-center gap-5 px-6 xl:px-0 z-10">
+                  <aside className="flex flex-col lg:w-3/12 xl:w-1/5 gap-5">
+                    <Profile />
+                    <Skills
+                      skills={[
+                        "Next.js",
+                        "React.js",
+                        "Typescript",
+                        "Python",
+                        "Node.js",
+                        "Docker",
+                        "SQL",
+                        "CSS",
+                      ]}
+                    />
+                  </aside>
+                  <article className="lg:w-7/12 xl:w-6/12 flex flex-col gap-5 xl:gap-4">
+                    <Navbar />
+                    <div className="container-default">{children}</div>
+                  </article>
+                </section>
+              </main>
             </div>
             <Footer></Footer>
           </Providers>
