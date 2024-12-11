@@ -9,7 +9,7 @@ import useHorizontalOverflow from "@/hooks/useHorizontalOverflow";
 
 import pagesIndex from "@/utils/pagesIndex.ts";
 import SettingsMenu from "../SettingsMenu/SettingsMenu";
-import NavbarItems from "./NavbarItems/NavbarItems";
+import NavbarItem from "./NavbarItem/NavbarItem";
 import SwipeHintAnimation from "./SwipeHintAnimation";
 
 import projectsData from "@/data/projects"; 
@@ -68,7 +68,7 @@ const Navbar = ({}: Props) => {
         className="flex overflow-x-scroll scrollbar sm:overflow-auto scrollbar-primary py-4 lg:p-0 w-full text-xl gap-4 lg:gap-0 lg:text-[1.05rem] xl:text-lg xl:gap-1 2xl:text-xl 2xl:gap-2"
       >
         {pagesIndex.map((item) => (
-          <NavbarItems
+          <NavbarItem
             key={item.id}
             onClick={() => changePage(item.path, item.id)}
             text={item.labels[locale] || item.labels.en}
