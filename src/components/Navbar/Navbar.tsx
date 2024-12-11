@@ -31,12 +31,13 @@ const Navbar = ({}: Props) => {
   // State to track the current active page ID
   const [currentPageId, setCurrentPageId] = useState<string>("");
 
-  // Ensure correct active state for root path or default project page
+  // Ensure correct active state for root path, /es or default project page
   useEffect(() => {
-    if (pathname === "/" || pathname === "") {
-      setCurrentPageId("projects"); // Mark Projects as active on root path
+    // If the path is the root "/" or "/es", treat it as "projects"
+    if (pathname === "/" || pathname === "" || pathname === "/es") {
+      setCurrentPageId("projects");
     } else {
-      setCurrentPageId(getCurrentPageId(pathname));
+      setCurrentPageId(getCurrentPageId(pathname)); // For other paths, check if it's a project or default
     }
   }, [pathname]);
 
