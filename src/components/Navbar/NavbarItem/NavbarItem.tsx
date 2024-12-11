@@ -3,7 +3,7 @@
 
 type Props = { text: string; active?: boolean, onClick : React.MouseEventHandler<HTMLButtonElement> };
 
-function NavbarItems({onClick, text, active }: Props) {
+function NavbarItem({onClick, text, active }: Props) {
     
   return (
     <button 
@@ -18,4 +18,4 @@ function NavbarItems({onClick, text, active }: Props) {
   );
 }
 
-export default NavbarItems;
+export default NavbarItem;
