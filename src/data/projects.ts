@@ -17,7 +17,7 @@ const projectsData: Project[] = [
       es: "Sitio web para la nacionalmente reconocida empresa Abbate Servicios Funebres, donde los usuarios pueden consultar fechas y lugares de los servicios. Cuenta con un menú para seleccionar la región para la consulta, así como una sección para ver los datos.\nEste proyecto fue desarrollado siguiendo las directrices estéticas y de funcionalidad establecidas por el cliente, con un fuerte enfoque en la simplicidad, accesibilidad y escalabilidad.",
     },
     imageAlt: {
-      en: "Screenshot of the Abbate.uy website showing the main section",
+      en: "View of the Abbate.uy website showing the main section",
       es: "Captura de pantalla de la página web Abbate.uy donde se ve la sección principal",
     },
     url: "abbate.uy",
