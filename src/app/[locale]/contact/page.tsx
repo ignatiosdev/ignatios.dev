@@ -32,7 +32,7 @@ export default async function Contact({ params }: { params: Params }) {
         <div className="flex flex-col gap-y-4 py-6">
           <div className="flex items-center gap-4">
             <FaEnvelope size={28} className="text-primary"></FaEnvelope>
-            <span className="font-medium text-lg">contact@ignatios.dev</span>
+            <span className="font-medium text-lg">cattalurdai@gmail.com</span>
           </div>
           <div className="flex items-center gap-4">
             <FaLinkedinIn size={28} className="text-primary"></FaLinkedinIn>
