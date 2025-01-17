@@ -18,7 +18,7 @@ const config: Config = {
     },
   },
   plugins: [require("daisyui")],
-  darkMode: "class",
+  darkMode: ['selector', '[data-theme="dark"]'],
   daisyui: {
   
     themes: [
