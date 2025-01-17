@@ -7,14 +7,15 @@ export function ThemeController() {
   const { theme, setTheme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
+  // Determine the effective theme (resolved value)
+  const effectiveTheme = theme === "system" ? systemTheme : theme;
+
   useEffect(() => {
     // Ensure the component is mounted to avoid hydration mismatch
     setMounted(true);
   }, []);
 
   const toggleTheme = () => {
-    // Determine the current effective theme
-    const effectiveTheme = theme === "system" ? systemTheme : theme;
     const newTheme = effectiveTheme === "dark" ? "light" : "dark";
     setTheme(newTheme);
 
@@ -30,12 +31,12 @@ export function ThemeController() {
   return (
     <label
       className="swap swap-rotate"
-      title={theme === "light" ? "Switch to Dark" : "Switch to Light"}
+      title={effectiveTheme === "light" ? "Switch to Dark" : "Switch to Light"}
     >
       <input
         type="checkbox"
         className="theme-controller"
-        checked={theme === "dark"}
+        checked={effectiveTheme === "dark"} // Use resolved theme for checkbox state
         onChange={toggleTheme}
       />
       {/* Sun icon */}
