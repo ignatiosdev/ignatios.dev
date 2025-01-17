@@ -4,24 +4,28 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 export function ThemeController() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true); // Ensure the component is only rendered on the client-side
+    // Ensure the component is mounted to avoid hydration mismatch
+    setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return null; // Don't render anything server-side to avoid hydration issues
-  }
-
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
+    // Determine the current effective theme
+    const effectiveTheme = theme === "system" ? systemTheme : theme;
+    const newTheme = effectiveTheme === "dark" ? "light" : "dark";
     setTheme(newTheme);
-    
-    document.documentElement.classList.remove(theme === "light" ? "light" : "dark");
+
+    // Update the class on the root element for Tailwind styling
+    document.documentElement.classList.remove(effectiveTheme === "dark" ? "dark" : "light");
     document.documentElement.classList.add(newTheme);
   };
+
+  if (!mounted) {
+    return null; // Avoid rendering until the component is fully mounted
+  }
 
   return (
     <label
