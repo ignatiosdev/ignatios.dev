@@ -7,7 +7,7 @@ export default function ProfilePicture({ profileImg }: Props) {
   return (
     <img
       src={profileImg.src}
-      className="w-40 h-40 container-round mx-auto"
+      className="w-36 h-36 rounded-full  border-none border-transparent mx-auto"
     >
       
     </img>
