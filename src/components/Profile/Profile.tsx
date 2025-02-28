@@ -16,7 +16,7 @@ function Profile({}: Props) {
         <div className="w-8/12 md:w-full">
           <ProfilePicture profileImg={profileImg}></ProfilePicture>
         </div>
-        <div className="w-2/12 md:hidden">
+        <div className="w-2/12 lg:hidden">
           <div className="flex flex-col -me-2">
             <SettingsMenu></SettingsMenu>
           </div>
