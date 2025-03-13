@@ -4,8 +4,8 @@ const experienceData: Experience[] = [
   {
     title: { en: "Full-Stack Developer at Teletipos", es: "Desarrollador Full-Stack en Teletipos" },
     description: {
-      es: "Desarrollo de aplicaciones empresariales para usuarios finales y administrativas, enfocadas en la gestión de datos y la biometría. Implementación de React en el frontend, Node.js y Express para el desarrollo de APIs RESTful en el backend, y MySQL para la gestión de bases de datos. Realización de documentación técnica y trabajo en equipo bajo metodologías ágiles.",
-      en: "Development of enterprise applications for end users, focusing on data management and biometrics. Implementation of React for the frontend, Node.js and Express for RESTful API development on the backend, and MySQL for database management. Creation of technical documentation and collaboration within an agile team environment.",
+      es: "Desarrollo de aplicaciones empresariales de todo tipo, que van desde la gestión de datos hasta las finanzas y la biometría. Implementación de React.js en el frontend, Node.js y Express para el desarrollo de APIs RESTful en el backend, y MySQL para la gestión de bases de datos. Creación de documentación técnica y trabajo en equipo mediante metodologías ágiles.",
+      en: "Development of enterprise applications across a wide range of domains, ranging from data management to finance and biometrics. Implementation of React.js on the frontend, Node.js and Express for RESTful API development on the backend, and MySQL for database management. Creation of technical documentation and teamwork within an agile methodology framework.",
     },
     date: {
       en: "FEBRERO 2025 - PRESENT",
