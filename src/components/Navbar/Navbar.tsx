@@ -12,7 +12,7 @@ import SettingsMenu from "../SettingsMenu/SettingsMenu";
 import NavbarItem from "./NavbarItem/NavbarItem";
 import SwipeHintAnimation from "./SwipeHintAnimation";
 
-import projectsData from "@/data/projects"; 
+import projectsData from "@/data/projects";
 
 type Props = {};
 
@@ -24,7 +24,9 @@ const Navbar = ({}: Props) => {
   // Helper function to normalize path and check if it corresponds to a project
   const getCurrentPageId = (path: string) => {
     const normalizedPath = path.split("/").at(-1) || ""; // Normalize the pathname
-    const isProjectPage = projectsData.some((project) => project.id === normalizedPath);
+    const isProjectPage = projectsData.some(
+      (project) => project.id === normalizedPath
+    );
     return isProjectPage ? "projects" : normalizedPath || "projects"; // Default to "projects"
   };
 
@@ -47,7 +49,11 @@ const Navbar = ({}: Props) => {
       setCurrentPageId(event.detail);
     };
     window.addEventListener("pageChange", handlePageChange as EventListener);
-    return () => window.removeEventListener("pageChange", handlePageChange as EventListener);
+    return () =>
+      window.removeEventListener(
+        "pageChange",
+        handlePageChange as EventListener
+      );
   }, []);
 
   // Navigate to a page and update the active state
@@ -66,7 +72,7 @@ const Navbar = ({}: Props) => {
       <div
         id="navbar"
         ref={navbarRef}
-        className="flex overflow-x-scroll scrollbar sm:overflow-auto scrollbar-primary py-4 lg:p-0 w-full text-xl gap-4 lg:gap-0 lg:text-[1.05rem] xl:text-lg xl:gap-1 2xl:text-xl 2xl:gap-2"
+        className="grid grid-cols-2 md:flex overflow-x-scroll scrollbar sm:overflow-auto scrollbar-primary py-4 lg:p-0 w-full text-xl gap-4 lg:gap-0 lg:text-[1.05rem] xl:text-lg xl:gap-1 2xl:text-xl 2xl:gap-2"
       >
         {pagesIndex.map((item) => (
           <NavbarItem
@@ -82,9 +88,6 @@ const Navbar = ({}: Props) => {
       <div className="md:flex items-center hidden xl:px-2 ml-auto md:w-2/12">
         <SettingsMenu />
       </div>
-
-      {/* Swipe hint animation */}
-      <SwipeHintAnimation hasBeenScrolled={navbarHasBeenScrolled} navbarIsScrollable={hasOverflow} />
     </div>
   );
 };
