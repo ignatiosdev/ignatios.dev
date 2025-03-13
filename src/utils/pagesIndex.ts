@@ -5,11 +5,15 @@ interface NavigationItem {
 }
 
 const pagesIndex: NavigationItem[] = [
-  { id: "projects", labels: { en: "Projects", es: "Proyectos" }, path: "/" },
   {
     id: "experience",
     labels: { en: "Experience", es: "Experiencia" },
-    path: "/experience",
+    path: "/",
+  },
+  {
+    id: "projects",
+    labels: { en: "Projects", es: "Proyectos" },
+    path: "/projects",
   },
   {
     id: "education",

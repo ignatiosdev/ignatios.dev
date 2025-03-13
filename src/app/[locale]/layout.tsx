@@ -31,16 +31,16 @@ export async function generateMetadata({}: { params: { locale: string } }) {
     title: t("title"),
     description: t("description"),
     alternates: {
-      canonical: `${baseUrl}`,
+      canonical: `${baseUrl}/es`,
       languages: {
-        en: `${baseUrl}`,
-        es: `${baseUrl}/es`,
+        en: `${baseUrl}/en`,
+        es: `${baseUrl}`,
       },
     },
     openGraph: {
       title: t("title"),
       description: t("description"),
-      url: "ignatios.dev",
+      url: "ignatios.dev/es",
       siteName: "Ignatios Portfolio",
       images: [
         {
@@ -88,7 +88,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Params;
 }) {
-  const { locale } = await params; // Awaiting the `params` object here.
+  const { locale = "es" } = await params; // Default locale to Spanish
 
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale as any)) {
