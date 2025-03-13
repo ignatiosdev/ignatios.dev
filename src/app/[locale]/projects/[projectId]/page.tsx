@@ -42,7 +42,7 @@ export default async function ProjectInfo({ params }: { params: Params }) {
   return (
     <>
       <div className="flex items-center gap-3">
-        <Link href={"/"}>
+        <Link href={"/projects"}>
           <IoArrowBackOutline className="text-subtitle-darker" size={28} />
         </Link>
         <h1 className="text-2xl font-bold">{currentProject?.title[locale]}</h1>

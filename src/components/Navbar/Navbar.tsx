@@ -37,7 +37,7 @@ const Navbar = ({}: Props) => {
   useEffect(() => {
     // If the path is the root "/" or "/es", treat it as "projects"
     if (pathname === "/" || pathname === "" || pathname === "/es") {
-      setCurrentPageId("projects");
+      setCurrentPageId("experience");
     } else {
       setCurrentPageId(getCurrentPageId(pathname)); // For other paths, check if it's a project or default
     }
