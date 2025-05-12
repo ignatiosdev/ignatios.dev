@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /_next/static/
+Disallow: /api/
+Disallow: /private/
+Disallow: /admin/
 
-Sitemap: https://ignatios.dev/api/sitemap
+Sitemap: https://ignatios.dev/sitemap.xml
