@@ -105,17 +105,62 @@ export default async function RootLayout({
     <html className={inter.className} lang={locale} suppressHydrationWarning>
       <Script id="structured-data" type="application/ld+json">
         {`
-          {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "url": "https://ignatios.dev",
+          "name": "Ignatios Portfolio",
+          "alternateName": "Ignacio Cattalurda - Full-Stack Developer",
+          "description": "Portafolio profesional de Ignacio Cattalurda, desarrollador Full-Stack especializado en Next.js, React y Node.js en Uruguay",
+          "inLanguage": ["es", "en"],
+          "author": {
+            "@type": "Person",
+            "name": "Ignacio Cattalurda",
+            "jobTitle": "Full-Stack Developer",
             "url": "https://ignatios.dev",
-            "name": "Ignatios Portfolio",
-            "alternateName": "Ignacio Cattalurda",
-            "inLanguage": ["en", "es"],
-            "author": {
+            "sameAs": [
+              "https://uy.linkedin.com/in/ignatiosdev",
+              "https://github.com/ignatiosdev"
+            ]
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Ignacio Cattalurda"
+          }
+        `}
+      </Script>
+
+      <Script type="application/ld+json">
+        {`
+          {
+              "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Ignacio Cattalurda"
-            }
+              "name": "Ignacio Cattalurda",
+              "url": "https://ignatios.dev",
+              "image": "https://ignatios.dev/_next/static/media/profileImage.0053a195.webp", 
+              "jobTitle": "Full-Stack Developer",
+              "nationality": {
+                "@type": "Country",
+                "name": "Uruguay"
+              },
+              "knowsLanguage": ["es", "en"],
+              "knowsAbout": [
+                "Next.js",
+                "React",
+                "TypeScript",
+                "Node.js",
+                "Python",
+                "Docker",
+                "SQL",
+                "Web Development"
+              ],
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Teletipos"
+              },
+            "sameAs": [
+              "https://uy.linkedin.com/in/ignatiosdev",
+              "https://github.com/ignatiosdev"
+            ]
           }
         `}
       </Script>
