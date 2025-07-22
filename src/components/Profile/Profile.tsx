@@ -25,7 +25,7 @@ function Profile({}: Props) {
       <div>
         <h1 className="text-3xl font-bold">Ignacio Cattalurda</h1>
         <h3 className="text-subtitle text-sm ">
-          Full-stack developer - Maldonado, Uruguay
+          Full-stack developer - Montevideo, Uruguay
         </h3>
       </div>
       <div className="text-subtitle">
